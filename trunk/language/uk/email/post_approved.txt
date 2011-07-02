@@ -1,4 +1,4 @@
-Subject: Повідомлення одобрено - "{POST_SUBJECT}"
+Subject: Повідомлення схвалено - "{POST_SUBJECT}"
 
 Привіт, {USERNAME},
 
