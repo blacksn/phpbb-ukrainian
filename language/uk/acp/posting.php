@@ -54,7 +54,7 @@ $lang = array_merge($lang, array(
 
 	'BBCODE_INVALID_TAG_NAME'	=> 'Обрана вами назва тегу BBCode вже існує.',
 	'BBCODE_INVALID'			=> 'Ваш BBCode побудовано в невірній формі.',
-	'BBCODE_OPEN_ENDED_TAG'		=> 'BBCode повинен містити відкриваючий та закриваючий теги.',
+	'BBCODE_OPEN_ENDED_TAG'		=> 'BBCode повинен містити відкривний та закривний теги.',
 	'BBCODE_TAG'				=> 'Тег',
 	'BBCODE_TAG_TOO_LONG'		=> 'Обрана вами назва тегу надто довга.',
 	'BBCODE_TAG_DEF_TOO_LONG'	=> 'Введений опис тегу надто довгий, будь-ласка, скоротіть його.',
@@ -136,7 +136,7 @@ $lang = array_merge($lang, array(
 	'ICONS_NONE_ADDED' 	=> 'Значків не додано. ',
 	'ICONS_NONE_EDITED' 	=> 'Значки не оновлено.', 
 
-	'ICONS_NOT_DISPLAYED'	=> 'Наступні значки не відображаються на сторніці розміщення повідомлень',
+	'ICONS_NOT_DISPLAYED'	=> 'Наступні значки не відображаються на сторінці розміщення повідомлень',
 	'ICONS_ORDER'			=> 'Порядок значкі',
 	'ICONS_URL'				=> 'Файл зображення значка',
 	'ICONS_WIDTH'			=> 'Ширина значка',
