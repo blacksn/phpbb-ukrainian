@@ -163,7 +163,7 @@ $lang = array_merge($lang, array(
 
 	'acl_f_search'		=> array('lang' => 'Може здійснювати пошук на форумі', 'cat' => 'misc'),
 	'acl_f_ignoreflood' => array('lang' => 'Може ігнорувати затримку фладу', 'cat' => 'misc'),
-	'acl_f_postcount'	=> array('lang' => 'Лічильник повідомлень увімкнено<br /><em>Зауважте, що дане налаштування застосувується лише для нових повідомлень.</em>', 'cat' => 'misc'),
+	'acl_f_postcount'	=> array('lang' => 'Лічильник повідомлень увімкнено<br /><em>Зауважте, що дане налаштування застосовується лише для нових повідомлень.</em>', 'cat' => 'misc'),
 	'acl_f_noapprove'	=> array('lang' => 'Може створювати повідомлення без схвалення', 'cat' => 'misc'),
 ));
 
@@ -195,7 +195,7 @@ $lang = array_merge($lang, array(
 	'acl_a_forum'		=> array('lang' => 'Може керувати форумами', 'cat' => 'forums'),
 	'acl_a_forumadd'	=> array('lang' => 'Може створювати нові підфоруми', 'cat' => 'forums'),
 	'acl_a_forumdel'	=> array('lang' => 'Може видаляти форумs', 'cat' => 'forums'),
-	'acl_a_prune'		=> array('lang' => 'Може здійснювати очистку форумів', 'cat' => 'forums'),
+	'acl_a_prune'		=> array('lang' => 'Може здійснювати очищення форумів', 'cat' => 'forums'),
 
 	'acl_a_icons'		=> array('lang' => 'Може змінювати значки тем/повідомлень та смайлики', 'cat' => 'posting'),
 	'acl_a_words'		=> array('lang' => 'Може змінювати цензор слів', 'cat' => 'posting'),
@@ -230,7 +230,7 @@ $lang = array_merge($lang, array(
 	'acl_a_email'		=> array('lang' => 'Може здійснювати масове розсилання e-mail', 'cat' => 'misc'),
 	'acl_a_bots'		=> array('lang' => 'Може керувати ботами', 'cat' => 'misc'),
 	'acl_a_reasons'		=> array('lang' => 'Може керувати списком скарг/причин', 'cat' => 'misc'),
-	'acl_a_backup'		=> array('lang' => 'Може стоврювати резервні копії / відновлювати базу даних', 'cat' => 'misc'),
+	'acl_a_backup'		=> array('lang' => 'Може створювати резервні копії / відновлювати базу даних', 'cat' => 'misc'),
 	'acl_a_search'		=> array('lang' => 'Може керувати пошуковими індексами і їх налаштуваннями', 'cat' => 'misc'),
 ));
 
