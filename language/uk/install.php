@@ -372,7 +372,7 @@ $lang = array_merge($lang, array(
 // Updater
 $lang = array_merge($lang, array(
 	'ALL_FILES_UP_TO_DATE'		=> 'Усі файли відповідають самій останній версії phpBB. Тепер <a href="../ucp.php?mode=login">увійдіть на форум</a> і переконайтеся, що все працює нормально. Не забудьте видалити, перейменувати або перемістити вашу директорію install! Будь-ласка, надішліть нам оновлену інформацію про ваш сервер і конфігурації форуму за допомогою сторінки <a href="../ucp.php?mode=login&redirect=adm/index.php%3Fi=send_statistics%26mode=send_statistics">відправки статистичної інформації</a> в панелі адміністрування.',
-	'ARCHIVE_FILE'				=> 'Файл-джерерло в архіві',
+	'ARCHIVE_FILE'				=> 'Файл-джерело в архіві',
 
 	'BACK'				=> 'Назад',
 	'BINARY_FILE'		=> 'Бінарний файл',
