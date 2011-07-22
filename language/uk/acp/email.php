@@ -52,7 +52,9 @@ $lang = array_merge($lang, array(
 	'SEND_TO_GROUP'			=> 'Відіслати групі',
 	'SEND_TO_USERS'			=> 'Відіслати учасникам',
 	'SEND_TO_USERS_EXPLAIN'	=> 'Введення імен відмінить усі групи, обрані раніше. Вводьте кожне ім\'я з нової стрічки.',
-	
+   
+  'MAIL_BANNED'			=> 'Надсилати e-mail забаненим користувачам',
+	'MAIL_BANNED_EXPLAIN'	=> 'Дане налаштування визначає, чи будуть отримувати e-mail забанені користувачі при масовій розсилці e-mail.',
 	'MAIL_HIGH_PRIORITY'	=> 'Високий',
 	'MAIL_LOW_PRIORITY'		=> 'Низький',
 	'MAIL_NORMAL_PRIORITY'	=> 'Звичайний',
