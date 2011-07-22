@@ -37,14 +37,14 @@ if (empty($lang) || !is_array($lang))
 
 $lang = array_merge($lang, array(
 	'RECAPTCHA_LANG' => 'uk',
-	'RECAPTCHA_NOT_AVAILABLE' => 'Для використання reCaptcha необхідно створити обліковий запис на сайті <a href="http://recaptcha.net">reCaptcha.net</a>.',
+	'RECAPTCHA_NOT_AVAILABLE' => 'Для використання reCaptcha необхідно створити обліковий запис на сайті <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
 	'CAPTCHA_RECAPTCHA' => 'reCaptcha',
 	'RECAPTCHA_INCORRECT' => 'Ви ввели невірний код візуального підтвердження',
 
 	'RECAPTCHA_PUBLIC' => 'Публічний ключ reCaptcha',
-	'RECAPTCHA_PUBLIC_EXPLAIN' => 'Ваш публічний ключ reCaptcha. Ключі можна отримати на сайті <a href="http://recaptcha.net">reCaptcha.net</a>.',
+	'RECAPTCHA_PUBLIC_EXPLAIN' => 'Ваш публічний ключ reCaptcha. Ключі можна отримати на сайті <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
 	'RECAPTCHA_PRIVATE' => 'Приватний ключ reCaptcha (Private Key)',
-	'RECAPTCHA_PRIVATE_EXPLAIN' => 'Ваш приватний ключ reCaptcha. Ключі можна отримати на сайті <a href="http://recaptcha.net">reCaptcha.net</a>.',
+	'RECAPTCHA_PRIVATE_EXPLAIN' => 'Ваш приватний ключ reCaptcha. Ключі можна отримати на сайті <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
 
 	'RECAPTCHA_EXPLAIN' => 'З метою запобігання автоматичних реєстрацій ми вимагаємо вводу обох слів, відображених нижче, в поле для введення тексту.',
 ));
