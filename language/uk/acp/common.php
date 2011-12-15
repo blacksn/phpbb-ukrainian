@@ -280,6 +280,16 @@ $lang = array_merge($lang, array(
 	'BOARD_STARTED'	=> 'Форум запрацював',
 	'DATABASE_SERVER_INFO'	=> 'Сервер баз даних',
 	'DATABASE_SIZE'	=> 'Розмір бази даних',
+   // Enviroment configuration checks, mbstring related
+	'ERROR_MBSTRING_FUNC_OVERLOAD'					=> 'Функцію overloading налаштовано невірно',
+	'ERROR_MBSTRING_FUNC_OVERLOAD_EXPLAIN'			=> 'Значення <var>mbstring.func_overload</var> повинне бути 0 або 4. Ви можете перевірити поточне значення на сторінці <samp>Інформація про PHP</samp>.',
+	'ERROR_MBSTRING_ENCODING_TRANSLATION'			=> 'Transparent character encoding налаштовано невірно',
+	'ERROR_MBSTRING_ENCODING_TRANSLATION_EXPLAIN'	=> 'Значення <var>mbstring.encoding_translation</var> повинне бути 0. Ви можете перевірити поточне значення на сторінці <samp>Інформація про PHP</samp>.',
+	'ERROR_MBSTRING_HTTP_INPUT'						=> 'HTTP input character conversion налаштовано невірно',
+	'ERROR_MBSTRING_HTTP_INPUT_EXPLAIN'				=> 'Значення <var>mbstring.http_input</var> повинне бути <samp>pass</samp>. Ви можете перевірити поточне значення на сторінці <samp>Інформація про PHP</samp>.',
+	'ERROR_MBSTRING_HTTP_OUTPUT'					=> 'HTTP output character conversion налаштовано невірно',
+	'ERROR_MBSTRING_HTTP_OUTPUT_EXPLAIN'			=> 'Значення <var>mbstring.http_output</var> повинне бути <samp>pass</samp>. Ви можете перевірити поточне значення на сторінці <samp>Інформація про PHP</samp>.',
+
 	'FILES_PER_DAY'	=> 'Приєднаних файлів за день',
 	'FORUM_STATS'	=> 'Статистика форуму',
 	'GZIP_COMPRESSION'	=> 'Стиснення GZip',
