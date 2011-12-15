@@ -59,6 +59,8 @@ $lang = array_merge($lang, array(
 	'LANGUAGE_PACK_DELETED'				=> 'Мовний пакет <strong>%s</strong> успішно видалено. Усім користувачам, які використовували цей мовний пакет, встановлено мовний пакет за замовчуванням.',
 	'LANGUAGE_PACK_DETAILS'				=> 'Інформація про мовний пакет',
 	'LANGUAGE_PACK_INSTALLED'			=> 'Мовний пакет <strong>%s</strong> успішно встановлено.',
+	'LANGUAGE_PACK_CPF_UPDATE'			=> 'Змінні мови додаткових полів профілю було скопійовано з мови за замовчуванням. Змініть їх при необхідності.',
+
 	'LANGUAGE_PACK_ISO'					=> 'ISO',
 	'LANGUAGE_PACK_LOCALNAME'			=> 'Локальна назва',
 	'LANGUAGE_PACK_NAME'				=> 'Назва',
