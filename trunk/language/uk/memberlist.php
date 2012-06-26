@@ -100,7 +100,6 @@ $lang = array_merge($lang, array(
 	'ORDER'	=> 'Сортувати',
 	'OTHER'	=> 'Інший',
 	'POST_IP'	=> 'Написане з IP/домену',
-	'RANK'	=> 'Звання',
 	'REAL_NAME'	=> 'Ім\'я одержувача',
 	'RECIPIENT'	=> 'Одержувач',
 	'REMOVE_FOE'	=> 'Видалити з списку недругів',
