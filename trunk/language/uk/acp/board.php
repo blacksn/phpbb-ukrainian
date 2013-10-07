@@ -251,11 +251,7 @@ $lang = array_merge($lang, array(
  	'ACP_FEED_OVERALL_EXPLAIN'	=> 'Нові повідомлення з усіх форумів.', 
  	'ACP_FEED_OVERALL_FORUMS' => 'Увімкнути канал форумів', 
  	'ACP_FEED_OVERALL_FORUMS_EXPLAIN'	=> 'Вмикає канал “Усі форуми”, в якому відображається список форумів.',
- 	'ACP_FEED_OVERALL_FORUMS_LIMIT' => 'Кількість елементів на сторінку, яка буде відображатись в каналі форумів', 
- 
- 	'ACP_FEED_OVERALL_TOPIC' => 'Увімкнути загальний канал для тем', 
- 	'ACP_FEED_OVERALL_TOPIC_EXPLAIN' => 'Вмикає канал «Усі теми».', 
- 	'ACP_FEED_OVERALL_TOPIC_LIMIT' => 'Кількість елементів на сторінку, яка буде відображатись в каналі тем', 
+
  	'ACP_FEED_FORUM' => 'Дозволити канали форумів', 
  	'ACP_FEED_FORUM_EXPLAIN' => 'Нові повідомлення окремих форумів.', 
  	'ACP_FEED_TOPIC' => 'Дозволити канали тем', 
