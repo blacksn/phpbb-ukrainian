@@ -104,7 +104,6 @@ $lang = array_merge($lang, array(
 	'RECIPIENT'	=> 'Одержувач',
 	'REMOVE_FOE'	=> 'Видалити з списку недругів',
 	'REMOVE_FRIEND'	=> 'Видалити з списку друзів',
-	'SEARCH_USER_POSTS'	=> 'Знайти усі повідомлення користувача',
 	'SELECT_MARKED'	=> 'Обрати відмічені',
 	'SELECT_SORT_METHOD'	=> 'Оберіть метод сортування',
 	'SEND_IM'	=> 'Миттєві повідомлення',
