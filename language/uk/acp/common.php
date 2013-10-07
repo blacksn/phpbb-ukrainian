@@ -505,9 +505,9 @@ $lang = array_merge($lang, array(
 	'LOG_MODS_ADDED'	=> '<strong>Додано нових лідерів до групи</strong> %1$s<br />» %2$s',
 	'LOG_USERS_ADDED'	=> '<strong>Додано нових учасників до групи</strong> %1$s<br />» %2$s',
 	'LOG_USERS_APPROVED' => '<strong>Схвалено кандидатів в групу </strong>%1$s<br />» %2$s',
- 	'LOG_USERS_PENDING' => '<strong>Користувачі відіслали запит про вступ до групи «%1$s» і чекають схвалення </ strong><br />» %2$s',
+   'LOG_USERS_PENDING' => '<strong>Користувачі відіслали запит про вступ до групи «%1$s» і чекають схвалення </strong><br />» %2$s',
  
- 	'LOG_IMAGE_GENERATION_ERROR' => '<strong>Помилка під час створення зображення</strong><br/>» Помилка в %1$s у рядку %2$s:%3$s',
+   'LOG_IMAGE_GENERATION_ERROR' => '<strong>Помилка під час створення зображення</strong><br />» Помилка в %1$s у рядку %2$s:%3$s',
  
 	'LOG_IMAGESET_ADD_DB'	=> '<strong>Додано новий набір зображень до бази даних</strong><br />» %s',
 	'LOG_IMAGESET_ADD_FS'	=> '<strong>Додано новий набір зображень на сервер</strong><br />» %s',
