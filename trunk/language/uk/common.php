@@ -40,7 +40,7 @@ if (empty($lang) || !is_array($lang))
 //
 
 $lang = array_merge($lang, array(
-	'TRANSLATION_INFO'	=> 'Український переклад &copy 2005-2011 <a class="copyright" target="_blank" href="http://phpbb.com.ua/">Українська підтримка phpBB</a>',
+	'TRANSLATION_INFO'	=> 'Український переклад &copy 2005-2013 <a class="copyright" target="_blank" href="http://phpbb.com.ua/">Українська підтримка phpBB</a>',
 	'DIRECTION'	=> 'ltr',
 	'DATE_FORMAT'	=> '|d M Y|',
 	'USER_LANG'	=> 'uk',
