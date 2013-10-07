@@ -83,12 +83,16 @@ $lang = array_merge($lang, array(
 		'user_group'	=> 'Користувачі  та групи',
 	),
 
-	'permission_type'	=> array(
-		'u_'			=> 'Права доступу користувача',
-		'a_'			=> 'Права доступу адміністратора',
-		'm_'			=> 'Права доступу модератора',
-		'f_'			=> 'Права доступу для форума',
-	),
+// With defining 'global' here we are able to specify what is printed out if the permission is within the global scope.
+  	'permission_type'	=> array(
+        'u_'			=> 'Права доступу користувача',
+        'a_'			=> 'Права доступу адміністратора',
+        'm_'			=> 'Права доступу модератора',
+        'f_'			=> 'Права доступу для форума',
+        'global'		=> array(
+          'm_'			=> 'Глобальні права модератора',
+        ),
+	  ),
 ));
 
 // User Permissions
