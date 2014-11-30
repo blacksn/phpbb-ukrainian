@@ -1,11 +1,14 @@
 <?php
 /**
-* acp_permissions (phpBB Permission Set) [Ukrainian]
 *
-* @package language
-* @version $Id: permissions_phpbb.php 8911 2008-09-23 13:03:33Z acydburn $
-* @copyright (c) 2005 phpBB Group
-* @license http://opensource.org/licenses/gpl-license.php GNU Public License
+* This file is part of the phpBB Forum Software package.
+*
+* @copyright (c) phpBB Limited <https://www.phpbb.com>
+* @license GNU General Public License, version 2 (GPL-2.0)
+*
+* For full copyright and license information, please see
+* the docs/CREDITS.txt file.
+*
 */
 
 /**
@@ -21,221 +24,176 @@ if (empty($lang) || !is_array($lang))
 	$lang = array();
 }
 
-// DEVELOPERS PLEASE NOTE
-//
-// All language files should use UTF-8 as their encoding and the files must not contain a BOM.
-//
-// Placeholders can now contain order information, e.g. instead of
-// 'Page %s of %s' you can (and should) write 'Page %1$s of %2$s', this allows
-// translators to re-order the output of data while ensuring it remains correct
-//
-// You do not need this where single placeholders are used, e.g. 'Message %d' is fine
-// equally where a string contains only two placeholders which are used to wrap text
-// in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
-
-/**
-*	MODDERS PLEASE NOTE
-*	
-*	You are able to put your permission sets into a separate file too by
-*	prefixing the new file with permissions_ and putting it into the acp 
-*	language folder.
+*	EXTENSION-DEVELOPERS PLEASE NOTE
 *
-*	An example of how the file could look like:
-*
-*	<code>
-*
-*	if (empty($lang) || !is_array($lang))
-*	{
-*		$lang = array();
-*	}
-*
-*	// Adding new category
-*	$lang['permission_cat']['bugs'] = 'Bugs';
-*
-*	// Adding new permission set
-*	$lang['permission_type']['bug_'] = 'Bug Permissions';
-*
-*	// Adding the permissions
-*	$lang = array_merge($lang, array(
-*		'acl_bug_view'		=> array('lang' => 'Can view bug reports', 'cat' => 'bugs'),
-*		'acl_bug_post'		=> array('lang' => 'Can post bugs', 'cat' => 'post'), // Using a phpBB category here
-*	));
-*
-*	</code>
+*	You are able to put your permission sets into your extension.
+*	The permissions logic should be added via the 'core.permissions' event.
+*	You can easily add new permission categories, types and permissions, by
+*	simply merging them into the respective arrays.
+*	The respective language strings should be added into a language file, that
+*	start with 'permissions_', so they are automatically loaded within the ACP.
 */
 
-// Define categories and permission types
 $lang = array_merge($lang, array(
-	'permission_cat'	=> array(
-		'actions'		=> 'Дії',
-		'content'		=> 'Вміст',
-		'forums'		=> 'Форуми',
-		'misc'			=> 'Різне',
-		'permissions'	=> 'Права доступу',
-		'pm'			=> 'Приватні повідомлення',
-		'polls'			=> 'Опитування',
-		'post'			=> 'Повідомлення',
-		'post_actions'	=> 'Дії з повідомленнями',
-		'posting'		=> 'Написання повідомлень',
-		'profile'		=> 'Профіль',
-		'settings'		=> 'Налаштування',
-		'topic_actions'	=> 'Дії з темами',
-		'user_group'	=> 'Користувачі  та групи',
-	),
-
-// With defining 'global' here we are able to specify what is printed out if the permission is within the global scope.
-  	'permission_type'	=> array(
-        'u_'			=> 'Права доступу користувача',
-        'a_'			=> 'Права доступу адміністратора',
-        'm_'			=> 'Права доступу модератора',
-        'f_'			=> 'Права доступу для форума',
-        'global'		=> array(
-          'm_'			=> 'Глобальні права модератора',
-        ),
-	  ),
+	'ACL_CAT_ACTIONS'		=> 'Дії',
+	'ACL_CAT_CONTENT'		=> 'Вміст',
+	'ACL_CAT_FORUMS'		=> 'Форуми',
+	'ACL_CAT_MISC'			=> 'Різне',
+	'ACL_CAT_PERMISSIONS'	=> 'Права доступу',
+	'ACL_CAT_PM'			=> 'Приватні повідомлення',
+	'ACL_CAT_POLLS'			=> 'Опитування',
+	'ACL_CAT_POST'			=> 'Розміщення повідомлень',
+	'ACL_CAT_POST_ACTIONS'	=> 'Дії з повідомленнями',
+	'ACL_CAT_POSTING'		=> 'Повідомлення',
+	'ACL_CAT_PROFILE'		=> 'Профіль',
+	'ACL_CAT_SETTINGS'		=> 'Налаштування',
+	'ACL_CAT_TOPIC_ACTIONS'	=> 'Дії з темами',
+	'ACL_CAT_USER_GROUP'	=> 'Користувачі',
 ));
+
 
 // User Permissions
 $lang = array_merge($lang, array(
-	'acl_u_viewprofile'	=> array('lang' => 'Може переглядати профілі', 'cat' => 'profile'),
-	'acl_u_chgname'		=> array('lang' => 'Може змінювати ім\'я', 'cat' => 'profile'),
-	'acl_u_chgpasswd'	=> array('lang' => 'Може змінювати пароль', 'cat' => 'profile'),
-	'acl_u_chgemail'	=> array('lang' => 'Може змінювати адресу e-mail', 'cat' => 'profile'),
-	'acl_u_chgavatar'	=> array('lang' => 'Може змінювати аватар', 'cat' => 'profile'),
-	'acl_u_chggrp'		=> array('lang' => 'Може змінювати групу за замовчуванням', 'cat' => 'profile'),
+	'ACL_U_VIEWPROFILE'	=> 'Може переглядати профілі',
+	'ACL_U_CHGNAME'		=> 'Може змінювати ім\'я',
+	'ACL_U_CHGPASSWD'	=> 'Може змінювати пароль',
+	'ACL_U_CHGEMAIL'	=> 'Може змінювати адресу e-mail',
+	'ACL_U_CHGAVATAR'	=> 'Може змінювати аватар',
+	'ACL_U_CHGGRP'		=> 'Може змінювати групу за замовчуванням',
+	'ACL_U_CHGPROFILEINFO'	=> 'Може змінювати інформацію в полях профілю',
 
-	'acl_u_attach'		=> array('lang' => 'Може приєднувати файли', 'cat' => 'post'),
-	'acl_u_download'	=> array('lang' => 'Може завантажувати файли', 'cat' => 'post'),
-	'acl_u_savedrafts'	=> array('lang' => 'Може зберігати чернетки', 'cat' => 'post'),
-	'acl_u_chgcensors'	=> array('lang' => 'Може вимикати цензор слів', 'cat' => 'post'),
-	'acl_u_sig'			=> array('lang' => 'Може змінювати підпис', 'cat' => 'post'),
+	'ACL_U_ATTACH'		=> 'Може приєднувати файли', 
+	'ACL_U_DOWNLOAD'	=> 'Може завантажувати файли', 
+	'ACL_U_SAVEDRAFTS'	=> 'Може зберігати чернетки', 
+	'ACL_U_CHGCENSORS'	=> 'Може вимикати цензор слів', 
+	'ACL_U_SIG'			=> 'Може змінювати підпис',
 
-	'acl_u_sendpm'		=> array('lang' => 'Може надсилати приватні повідомлення', 'cat' => 'pm'),
-	'acl_u_masspm'		=> array('lang' => 'Може надсилати пп декільком користувачам', 'cat' => 'pm'),
-	'acl_u_masspm_group'	=> array('lang' => 'Може надсилати пп групам', 'cat' => 'pm'),
-	'acl_u_readpm'		=> array('lang' => 'Може читати приватні повідомлення', 'cat' => 'pm'),
-	'acl_u_pm_edit'		=> array('lang' => 'Може редагувати власні приватні повідомлення', 'cat' => 'pm'),
-	'acl_u_pm_delete'	=> array('lang' => 'Може видаляти приватні повідомлення з власної папки', 'cat' => 'pm'),
-	'acl_u_pm_forward'	=> array('lang' => 'Може перенаправляти приватні повідомлення', 'cat' => 'pm'),
-	'acl_u_pm_emailpm'	=> array('lang' => 'Може надсилати приватні повідомлення електронною поштою', 'cat' => 'pm'),
-	'acl_u_pm_printpm'	=> array('lang' => 'Може друкувати приватні повідомлення', 'cat' => 'pm'),
-	'acl_u_pm_attach'	=> array('lang' => 'Може приєднувати файли в приватні повідомлення', 'cat' => 'pm'),
-	'acl_u_pm_download'	=> array('lang' => 'Може завантажувати файли в приватних повідомленнях', 'cat' => 'pm'),
-	'acl_u_pm_bbcode'	=> array('lang' => 'Може вставляти BBCode в приватних повідомленнях', 'cat' => 'pm'),
-	'acl_u_pm_smilies'	=> array('lang' => 'Може вставляти смайлики в приватних повідомленнях', 'cat' => 'pm'),
-	'acl_u_pm_img'		=> array('lang' => 'Може вставляти зображення в приватних повідомленнях', 'cat' => 'pm'),
-	'acl_u_pm_flash'	=> array('lang' => 'Може вставляти Flash в приватних повідомленнях', 'cat' => 'pm'),
+	'ACL_U_SENDPM'		=> 'Може надсилати приватні повідомлення',
+	'ACL_U_MASSPM'		=> 'Може надсилати пп декільком користувачам',
+	'ACL_U_MASSPM_GROUP'	=> 'Може надсилати пп групам',
+	'ACL_U_READPM'		=> 'Може читати приватні повідомлення',
+	'ACL_U_PM_EDIT'		=> 'Може редагувати власні приватні повідомлення',
+	'ACL_U_PM_DELETE'	=> 'Може видаляти приватні повідомлення з власної папки',
+	'ACL_U_PM_FORWARD'	=> 'Може перенаправляти приватні повідомлення',
+	'ACL_U_PM_EMAILPM'	=> 'Може надсилати приватні повідомлення електронною поштою',
+	'ACL_U_PM_PRINTPM'	=> 'Може друкувати приватні повідомлення',
+	'ACL_U_PM_ATTACH'	=> 'Може приєднувати файли в приватні повідомлення',
+	'ACL_U_PM_DOWNLOAD'	=> 'Може завантажувати файли в приватних повідомленнях',
+	'ACL_U_PM_BBCODE'	=> 'Може вставляти BBCode в приватних повідомленнях',
+	'ACL_U_PM_SMILIES'	=> 'Може вставляти смайлики в приватних повідомленнях',
+	'ACL_U_PM_IMG'		=> 'Може вставляти зображення в приватних повідомленнях',
+	'ACL_U_PM_FLASH'	=> 'Може вставляти Flash в приватних повідомленнях',
 
-	'acl_u_sendemail'	=> array('lang' => 'Може надсилати листи e-mail', 'cat' => 'misc'),
-	'acl_u_sendim'		=> array('lang' => 'Може надсилати миттєві повідомлення', 'cat' => 'misc'),
-	'acl_u_ignoreflood'	=> array('lang' => 'Може ігнорувати затримку фладу', 'cat' => 'misc'),
-	'acl_u_hideonline'	=> array('lang' => 'Може приховати онлайн статус', 'cat' => 'misc'),
-	'acl_u_viewonline'	=> array('lang' => 'Може переглядати прихованих користувачів', 'cat' => 'misc'),
-	'acl_u_search'		=> array('lang' => 'Може здійснювати пошук на форумі', 'cat' => 'misc'),
+	'ACL_U_SENDEMAIL'	=> 'Може надсилати листи e-mail', 
+	'ACL_U_SENDIM'		=> 'Може надсилати миттєві повідомлення', 
+	'ACL_U_IGNOREFLOOD'	=> 'Може ігнорувати затримку фладу', 
+	'ACL_U_HIDEONLINE'	=> 'Може приховати онлайн статус', 
+	'ACL_U_VIEWONLINE'	=> 'Може переглядати прихованих користувачів',
+	'ACL_U_SEARCH'		=> 'Може здійснювати пошук на форумі',
 ));
 
 // Forum Permissions
 $lang = array_merge($lang, array(
-	'acl_f_list'		=> array('lang' => 'Може бачити форум', 'cat' => 'post'),
-	'acl_f_read'		=> array('lang' => 'Може читати форум', 'cat' => 'post'),
-	'acl_f_post'		=> array('lang' => 'Може створювати нові теми', 'cat' => 'post'),
-	'acl_f_reply'		=> array('lang' => 'Може відповідати в теми', 'cat' => 'post'),
-	'acl_f_icons'		=> array('lang' => 'Може використовувати значки тем/повідомлень', 'cat' => 'post'),
-	'acl_f_announce'	=> array('lang' => 'Може розміщувати оголошення', 'cat' => 'post'),
-	'acl_f_sticky'		=> array('lang' => 'Може створювати прикріплені теми', 'cat' => 'post'),
+	'ACL_F_LIST'		=> 'Може бачити форум', 
+	'ACL_F_READ'		=> 'Може читати форум', 
+	'ACL_F_SEARCH'		=> 'Може здійснювати пошук на форумі',
+	'ACL_F_SUBSCRIBE'	=> 'Може підписуватись на форум',
+	'ACL_F_PRINT'		=> 'Може роздруковувати теми', 
+	'ACL_F_EMAIL'		=> 'Може надсилати теми електронною поштою',  
+	'ACL_F_BUMP'		=> 'Може піднімати теми',
+	'ACL_F_USER_LOCK'	=> 'Може блокувати власні теми',
+	'ACL_F_DOWNLOAD'	=> 'Може завантажувати файли', 
+	'ACL_F_REPORT'		=> 'Може писати скарги', 
 
-	'acl_f_poll'		=> array('lang' => 'Може створювати опитування', 'cat' => 'polls'),
-	'acl_f_vote'		=> array('lang' => 'Може голосувати в опитуваннях', 'cat' => 'polls'),
-	'acl_f_votechg'		=> array('lang' => 'Може змінювати відданий голос', 'cat' => 'polls'),
+	'ACL_F_POST'		=> 'Може створювати нові теми', 
+	'ACL_F_STICKY'		=> 'Може створювати прикріплені теми', 
+	'ACL_F_ANNOUNCE'	=> 'Може розміщувати оголошення', 
+	'ACL_F_REPLY'		=> 'Може відповідати в теми', 
+	'ACL_F_EDIT'		=> 'Може редагувати власні повідомлення', 
+	'ACL_F_DELETE'		=> 'Може видаляти власні повідомлення',
+	'ACL_F_SOFTDELETE'	=> 'Может видаляти власні повідомлення<br /><em>Модератори, які мають право схвалювати повідомлення, можуть відновлювати видалені повідомлення.</em>',
+	'ACL_F_IGNOREFLOOD' => 'Може ігнорувати затримку фладу', 
+	'ACL_F_POSTCOUNT'	=> 'Лічильник повідомлень увімкнено<br /><em>Зауважте, що дане налаштування застосовується лише для нових повідомлень.</em>',
+	'ACL_F_NOAPPROVE'	=> 'Може створювати повідомлення без схвалення', 
 
-	'acl_f_attach'		=> array('lang' => 'Може приєднувати файли', 'cat' => 'content'),
-	'acl_f_download'	=> array('lang' => 'Може завантажувати файли', 'cat' => 'content'),
-	'acl_f_sigs'		=> array('lang' => 'Може використовувати підписи', 'cat' => 'content'),
-	'acl_f_bbcode'		=> array('lang' => 'Може вставляти BBCode', 'cat' => 'content'),
-	'acl_f_smilies'		=> array('lang' => 'Може вставляти смайлики', 'cat' => 'content'),
-	'acl_f_img'			=> array('lang' => 'Може вставляти зображення', 'cat' => 'content'),
-	'acl_f_flash'		=> array('lang' => 'Може вставляти Flash', 'cat' => 'content'),
+	'ACL_F_ATTACH'		=> 'Може приєднувати файли', 
+	'ACL_F_ICONS'		=> 'Може використовувати значки тем/повідомлень', 
+	'ACL_F_BBCODE'		=> 'Може вставляти BBCode', 
+	'ACL_F_FLASH'		=> 'Може вставляти Flash',
+	'ACL_F_IMG'			=> 'Може вставляти зображення', 
+	'ACL_F_SIGS'		=> 'Може використовувати підписи',
+	'ACL_F_SMILIES'		=> 'Може вставляти смайлики', 
 
-	'acl_f_edit'		=> array('lang' => 'Може редагувати власні повідомлення', 'cat' => 'actions'),
-	'acl_f_delete'		=> array('lang' => 'Може видаляти власні повідомлення', 'cat' => 'actions'),
-	'acl_f_user_lock'	=> array('lang' => 'Може блокувати власні теми', 'cat' => 'actions'),
-	'acl_f_bump'		=> array('lang' => 'Може піднімати теми', 'cat' => 'actions'),
-	'acl_f_report'		=> array('lang' => 'Може писати скарги', 'cat' => 'actions'),
-	'acl_f_subscribe'	=> array('lang' => 'Може підписуватись на форум', 'cat' => 'actions'),
-	'acl_f_print'		=> array('lang' => 'Може роздруковувати теми', 'cat' => 'actions'),
-	'acl_f_email'		=> array('lang' => 'Може надсилати теми електронною поштою', 'cat' => 'actions'),
-
-	'acl_f_search'		=> array('lang' => 'Може здійснювати пошук на форумі', 'cat' => 'misc'),
-	'acl_f_ignoreflood' => array('lang' => 'Може ігнорувати затримку фладу', 'cat' => 'misc'),
-	'acl_f_postcount'	=> array('lang' => 'Лічильник повідомлень увімкнено<br /><em>Зауважте, що дане налаштування застосовується лише для нових повідомлень.</em>', 'cat' => 'misc'),
-	'acl_f_noapprove'	=> array('lang' => 'Може створювати повідомлення без схвалення', 'cat' => 'misc'),
+	'ACL_F_POLL'		=> 'Може створювати опитування', 
+	'ACL_F_VOTE'		=> 'Може голосувати в опитуваннях', 
+	'ACL_F_VOTECHG'		=> 'Може змінювати відданий голос', 
 ));
 
 // Moderator Permissions
 $lang = array_merge($lang, array(
-	'acl_m_edit'		=> array('lang' => 'Може редагувати повідомлення', 'cat' => 'post_actions'),
-	'acl_m_delete'		=> array('lang' => 'Може видаляти повідомлення', 'cat' => 'post_actions'),
-	'acl_m_approve'		=> array('lang' => 'Може схвалювати повідомлення', 'cat' => 'post_actions'),
-	'acl_m_report'		=> array('lang' => 'Може закривати та видаляти скарги', 'cat' => 'post_actions'),
-	'acl_m_chgposter'	=> array('lang' => 'Може змінювати автора повідомлення', 'cat' => 'post_actions'),
+	'ACL_M_EDIT'		=> 'Може редагувати повідомлення', 
+	'ACL_M_DELETE'		=> 'Може видаляти повідомлення', 
+	'ACL_M_SOFTDELETE'	=> 'Может видаляти повідомлення<br /><em>Модератори, які мають право схвалювати повідомлення, можуть відновлювати видалені повідомлення.</em>',
+	'ACL_M_APPROVE'		=> 'Може схвалювати і відновлювати повідомлення', 
+	'ACL_M_REPORT'		=> 'Може закривати та видаляти скарги',
+	'ACL_M_CHGPOSTER'	=> 'Може змінювати автора повідомлення',
 
-	'acl_m_move'	=> array('lang' => 'Може переносити теми', 'cat' => 'topic_actions'),
-	'acl_m_lock'	=> array('lang' => 'Може блокувати теми', 'cat' => 'topic_actions'),
-	'acl_m_split'	=> array('lang' => 'Може розділяти теми', 'cat' => 'topic_actions'),
-	'acl_m_merge'	=> array('lang' => 'Може об\'єднувати теми', 'cat' => 'topic_actions'),
+	'ACL_M_MOVE'	=> 'Може переносити теми', 
+	'ACL_M_LOCK'	=> 'Може блокувати теми', 
+	'ACL_M_SPLIT'	=> 'Може розділяти теми',
+	'ACL_M_MERGE'	=> 'Може об\'єднувати теми', 
 
-	'acl_m_info'	=> array('lang' => 'Може переглядати інформацію про повідомлення', 'cat' => 'misc'),
-	'acl_m_warn'	=> array('lang' => 'Може робити попередження<br /><em>Це налаштування встановлюється тільки глобально і не є форумним.</em>', 'cat' => 'misc'), // This moderator setting is only global (and not local)
-	'acl_m_ban'		=> array('lang' => 'Може керувати баном<br /><em>Це налаштування встановлюється тільки глобально і не є форумним.</em>', 'cat' => 'misc'), // This moderator setting is only global (and not local)
+	'ACL_M_INFO'	=> 'Може переглядати інформацію про повідомлення', 
+	'ACL_M_WARN'	=> 'Може робити попередження<br /><em>Це налаштування встановлюється тільки глобально і не є форумним.</em>',  // This moderator setting is only global (and not local)
+	'ACL_M_BAN'		=> 'Може керувати баном<br /><em>Це налаштування встановлюється тільки глобально і не є форумним.</em>',  // This moderator setting is only global (and not local)
 ));
 
 // Admin Permissions
 $lang = array_merge($lang, array(
-	'acl_a_board'		=> array('lang' => 'Може змінювати налаштування форуму/перевіряти наявність оновлень', 'cat' => 'settings'),
-	'acl_a_server'		=> array('lang' => 'Може змінювати налаштування серверу', 'cat' => 'settings'),
-	'acl_a_jabber'		=> array('lang' => 'Може змінювати налаштування Jabber', 'cat' => 'settings'),
-	'acl_a_phpinfo'		=> array('lang' => 'Може переглядати налаштування php', 'cat' => 'settings'),
+	'ACL_A_BOARD'		=> 'Може змінювати налаштування форуму/перевіряти наявність оновлень',
+	'ACL_A_SERVER'		=> 'Може змінювати налаштування серверу', 
+	'ACL_A_JABBER'		=> 'Може змінювати налаштування Jabber', 
+	'ACL_A_PHPINFO'		=> 'Може переглядати налаштування php',
 
-	'acl_a_forum'		=> array('lang' => 'Може керувати форумами', 'cat' => 'forums'),
-	'acl_a_forumadd'	=> array('lang' => 'Може створювати нові підфоруми', 'cat' => 'forums'),
-	'acl_a_forumdel'	=> array('lang' => 'Може видаляти форумs', 'cat' => 'forums'),
-	'acl_a_prune'		=> array('lang' => 'Може здійснювати очищення форумів', 'cat' => 'forums'),
+	'ACL_A_FORUM'		=> 'Може керувати форумами', 
+	'ACL_A_FORUMADD'	=> 'Може створювати нові підфоруми',
+	'ACL_A_FORUMDEL'	=> 'Може видаляти форумs',
+	'ACL_A_PRUNE'		=> 'Може здійснювати очищення форумів',
 
-	'acl_a_icons'		=> array('lang' => 'Може змінювати значки тем/повідомлень та смайлики', 'cat' => 'posting'),
-	'acl_a_words'		=> array('lang' => 'Може змінювати цензор слів', 'cat' => 'posting'),
-	'acl_a_bbcode'		=> array('lang' => 'Може визначати теги BBCode', 'cat' => 'posting'),
-	'acl_a_attach'		=> array('lang' => 'Може змінювати налаштування приєднаних файлів', 'cat' => 'posting'),
+	'ACL_A_ICONS'		=> 'Може змінювати значки тем/повідомлень та смайлики',
+	'ACL_A_WORDS'		=> 'Може змінювати цензор слів',
+	'ACL_A_BBCODE'		=> 'Може визначати теги BBCode',
+	'ACL_A_ATTACH'		=> 'Може змінювати налаштування приєднаних файлів',
 
-	'acl_a_user'		=> array('lang' => 'Може керувати користувачами', 'cat' => 'user_group'),
-	'acl_a_userdel'		=> array('lang' => 'Може видаляти/очищати користувачів', 'cat' => 'user_group'),
-	'acl_a_group'		=> array('lang' => 'Може керувати групами', 'cat' => 'user_group'),
-	'acl_a_groupadd'	=> array('lang' => 'Може створювати нові групи', 'cat' => 'user_group'),
-	'acl_a_groupdel'	=> array('lang' => 'Може видаляти групи', 'cat' => 'user_group'),
-	'acl_a_ranks'		=> array('lang' => 'Може керувати званнями', 'cat' => 'user_group'),
-	'acl_a_profile'		=> array('lang' => 'Може керувати додатковими полями профілю', 'cat' => 'user_group'),
-	'acl_a_names'		=> array('lang' => 'Може керувати забороненими іменами', 'cat' => 'user_group'),
-	'acl_a_ban'			=> array('lang' => 'Може керувати баном', 'cat' => 'user_group'),
+	'ACL_A_USER'		=> 'Може керувати користувачами',
+	'ACL_A_USERDEL'		=> 'Може видаляти/очищати користувачів',
+	'ACL_A_GROUP'		=> 'Може керувати групами',
+	'ACL_A_GROUPADD'	=> 'Може створювати нові групи',
+	'ACL_A_GROUPDEL'	=> 'Може видаляти групи',
+	'ACL_A_RANKS'		=> 'Може керувати званнями',
+	'ACL_A_PROFILE'		=> 'Може керувати додатковими полями профілю',
+	'ACL_A_NAMES'		=> 'Може керувати забороненими іменами',
+	'ACL_A_BAN'		=> 'Може керувати баном',
 
-	'acl_a_viewauth'	=> array('lang' => 'Може переглядати права доступу', 'cat' => 'permissions'),
-	'acl_a_authgroups'	=> array('lang' => 'Може змінювати права доступу для конкретних груп', 'cat' => 'permissions'),
-	'acl_a_authusers'	=> array('lang' => 'Може змінювати права доступу для конкретних користувачів', 'cat' => 'permissions'),
-	'acl_a_fauth'		=> array('lang' => 'Може змінювати права доступу форуму', 'cat' => 'permissions'),
-	'acl_a_mauth'		=> array('lang' => 'Може змінювати права доступу модератора', 'cat' => 'permissions'),
-	'acl_a_aauth'		=> array('lang' => 'Може змінювати права доступу адміністратора', 'cat' => 'permissions'),
-	'acl_a_uauth'		=> array('lang' => 'Може змінювати права доступу користувача', 'cat' => 'permissions'),
-	'acl_a_roles'		=> array('lang' => 'Може керувати ролями', 'cat' => 'permissions'),
-	'acl_a_switchperm'	=> array('lang' => 'Може використовувати інші права доступу', 'cat' => 'permissions'),
+	'ACL_A_VIEWAUTH'	=> 'Може переглядати права доступу',
+	'ACL_A_AUTHGROUPS'	=> 'Може змінювати права доступу для конкретних груп',
+	'ACL_A_AUTHUSERS'	=> 'Може змінювати права доступу для конкретних користувачів',
+	'ACL_A_FAUTH'		=> 'Може змінювати права доступу форуму',
+	'ACL_A_MAUTH'		=> 'Може змінювати права доступу модератора',
+	'ACL_A_AAUTH'		=> 'Може змінювати права доступу адміністратора',
+	'ACL_A_UAUTH'		=> 'Може змінювати права доступу користувача',
+	'ACL_A_ROLES'		=> 'Може керувати ролями',
+	'ACL_A_SWITCHPERM'	=> 'Може використовувати інші права доступу',
 
-	'acl_a_styles'		=> array('lang' => 'Може керувати стилями', 'cat' => 'misc'),
-	'acl_a_viewlogs'	=> array('lang' => 'Може переглядати логи', 'cat' => 'misc'),
-	'acl_a_clearlogs'	=> array('lang' => 'Може очищувати логи', 'cat' => 'misc'),
-	'acl_a_modules'		=> array('lang' => 'Може керувати модулями', 'cat' => 'misc'),
-	'acl_a_language'	=> array('lang' => 'Може керувати мовними пакетами', 'cat' => 'misc'),
-	'acl_a_email'		=> array('lang' => 'Може здійснювати масове розсилання e-mail', 'cat' => 'misc'),
-	'acl_a_bots'		=> array('lang' => 'Може керувати ботами', 'cat' => 'misc'),
-	'acl_a_reasons'		=> array('lang' => 'Може керувати списком скарг/причин', 'cat' => 'misc'),
-	'acl_a_backup'		=> array('lang' => 'Може створювати резервні копії / відновлювати базу даних', 'cat' => 'misc'),
-	'acl_a_search'		=> array('lang' => 'Може керувати пошуковими індексами і їх налаштуваннями', 'cat' => 'misc'),
+	'ACL_A_STYLES'		=> 'Може керувати стилями',
+	'ACL_A_EXTENSIONS'	=> 'Може керувати розширеннями',
+	'ACL_A_VIEWLOGS'	=> 'Може переглядати логи',
+	'ACL_A_CLEARLOGS'	=> 'Може очищувати логи',
+	'ACL_A_MODULES'		=> 'Може керувати модулями',
+	'ACL_A_LANGUAGE'	=> 'Може керувати мовними пакетами',
+	'ACL_A_EMAIL'		=> 'Може здійснювати масове розсилання e-mail',
+	'ACL_A_BOTS'		=> 'Може керувати ботами',
+	'ACL_A_REASONS'		=> 'Може керувати списком скарг/причин',
+	'ACL_A_BACKUP'		=> 'Може створювати резервні копії / відновлювати базу даних',
+	'ACL_A_SEARCH'		=> 'Може керувати пошуковими індексами і їх налаштуваннями',
 ));
-
-?>

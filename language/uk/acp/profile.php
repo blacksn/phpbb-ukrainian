@@ -1,12 +1,13 @@
 <?php
 /**
 *
-* acp_profile [Ukrainian]
+* This file is part of the phpBB Forum Software package.
 *
-* @package language
-* @version $Id: profile.php 9916 2009-08-03 15:46:56Z Kellanved $
-* @copyright (c) 2005 phpBB Group
-* @license http://opensource.org/licenses/gpl-license.php GNU Public License
+* @copyright (c) phpBB Limited <https://www.phpbb.com>
+* @license GNU General Public License, version 2 (GPL-2.0)
+*
+* For full copyright and license information, please see
+* the docs/CREDITS.txt file.
 *
 */
 
@@ -38,8 +39,11 @@ if (empty($lang) || !is_array($lang))
 // Custom profile fields
 $lang = array_merge($lang, array(
 	'ADDED_PROFILE_FIELD'	=> 'Додаткове поле профілю успішно додано.',
+	'ALPHA_DOTS'			=> 'Лише буквено-цифрові і крапки',
 	'ALPHA_ONLY'			=> 'Лише буквенно-числові',
 	'ALPHA_SPACERS'			=> 'Лише буквенно-числові та розділювачі',
+	'ALPHA_UNDERSCORE'		=> 'Лише буквено-цифрові і підкреслення',
+	'ALPHA_PUNCTUATION'		=> 'Лише буквено-цифрові, коми, крапки, підкреслення і тире, що починаються з літери',
 	'ALWAYS_TODAY'			=> 'Завжди поточна дата',
 
 	'BOOL_ENTRIES_EXPLAIN'	=> 'Введіть можливі варіанти',
@@ -65,7 +69,11 @@ $lang = array_merge($lang, array(
 	'DISPLAY_AT_PROFILE'			=> 'Відображати в Панелі керування',
 	'DISPLAY_AT_PROFILE_EXPLAIN'	=> 'Користувач може змінювати значення цього поля в Панелі керування.',
 	'DISPLAY_AT_REGISTER'			=> 'Відображати на сторінці реєстрації',
-	'DISPLAY_AT_REGISTER_EXPLAIN'	=> 'Якщо ця функція увімкнена, це поле буде відображатись при реєстрації.',
+	'DISPLAY_AT_REGISTER_EXPLAIN'	=> 'Якщо цю функцію увімкнено, це поле буде відображатись при реєстрації.',
+	'DISPLAY_ON_MEMBERLIST'			=> 'Відображати в списку користувачів',
+	'DISPLAY_ON_MEMBERLIST_EXPLAIN'	=> 'Якщо цю функцію увімкнено, поле буде відображено на сторінці списку користувачів.',
+	'DISPLAY_ON_PM'					=> 'Відображати при перегляді приватних повідомлень',
+	'DISPLAY_ON_PM_EXPLAIN'			=> 'Якщо цю опцію увімкнено, дане поле буде відображено в міні-профілі при перегляді приватних повідомлень.',
  	'DISPLAY_ON_VT' => 'Відображати на сторінках тем',
  	'DISPLAY_ON_VT_EXPLAIN' => 'Якщо дану опцію увімкнено, поле буде відображатися в міні-профілях користувачів на сторінках тем.',
   	'DISPLAY_PROFILE_FIELD'			=> 'Відображати поле профілю усім',
@@ -79,20 +87,26 @@ $lang = array_merge($lang, array(
 	'EVERYTHING_OK'					=> 'Все OK',
 
 	'FIELD_BOOL'				=> 'Логічне (Так/Ні)',
+	'FIELD_CONTACT_DESC'		=> 'Опис контакту',
+	'FIELD_CONTACT_URL'			=> 'Посилання на контакт',
 	'FIELD_DATE'				=> 'Дата',
 	'FIELD_DESCRIPTION'			=> 'Опис поля',
 	'FIELD_DESCRIPTION_EXPLAIN'	=> 'Пояснення, яке буде показане користувачу, для цього поля профілю.',
 	'FIELD_DROPDOWN'			=> 'Випадаючий список',
+ 	'FIELD_GOOGLEPLUS'			=> 'Google+',
 	'FIELD_IDENT'				=> 'Ідентифікатор поля',
 	'FIELD_IDENT_ALREADY_EXIST'	=> 'Обраний ідентифікатор поля уже існує. Оберіть, будь-ласка, іншу назву.',
 	'FIELD_IDENT_EXPLAIN'		=> 'Ідентифікатор поля - назва для ідентифікації поля профілю в базі даних та шаблонах.',
 	'FIELD_INT'					=> 'Числове',
+	'FIELD_IS_CONTACT'			=> 'Відображати поле як контактну інформацію',
+	'FIELD_IS_CONTACT_EXPLAIN'	=> 'Поле контакту відображається в розділі контактів профілю користувача, а також у мініпрофілі.',
 	'FIELD_LENGTH'				=> 'Розмір поля вводу',
 	'FIELD_NOT_FOUND'			=> 'Поле профілю не знайдене.',
 	'FIELD_STRING'				=> 'Однострокове текстове поле вводу',
 	'FIELD_TEXT'				=> 'Поле вводу тексту',
 	'FIELD_TYPE'				=> 'Тип поля',
 	'FIELD_TYPE_EXPLAIN'		=> 'Ви не зможете змінити тип поля пізніше.',
+	'FIELD_URL'					=> 'URL (посилання)',
 	'FIELD_VALIDATION'			=> 'Перевірка поля',
 	'FIRST_OPTION'				=> 'Перший варіант',
 
@@ -104,6 +118,11 @@ $lang = array_merge($lang, array(
 	'ISO_LANGUAGE'				=> 'Мова [%s]',
 
 	'LANG_SPECIFIC_OPTIONS'		=> 'Налаштування для мови [<strong>%s</strong>]',
+ 	'LETTER_NUM_DOTS'			=> 'Будь-які букви, цифри і крапки',
+ 	'LETTER_NUM_ONLY'			=> 'Будь-які букви і цифри',
+ 	'LETTER_NUM_PUNCTUATION'	=> 'Будь-які букви, цифри, коми, крапки, підкреслення і тире, які починаються з будь-якої букви',
+ 	'LETTER_NUM_SPACERS'		=> 'Будь-які букви, цифри і пробіли',
+	'LETTER_NUM_UNDERSCORE'		=> 'Будь-які букви, цифри і підкреслювання',
 
 	'MAX_FIELD_CHARS'		=> 'Максимальна кількість символів',
 	'MAX_FIELD_NUMBER'		=> 'Максимально допустиме число',
@@ -154,5 +173,3 @@ $lang = array_merge($lang, array(
 
 	'VISIBILITY_OPTION'				=> 'Видимість поля',
 ));
-
-?>

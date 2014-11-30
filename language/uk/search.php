@@ -1,13 +1,15 @@
 <?php
 /**
 *
-* search [Ukrainian]
+* This file is part of the phpBB Forum Software package.
 *
-* @package language
-* @version $Id: search.php,v 1.26 2007/10/04 15:07:24 acydburn Exp $
-* @copyright (c) 2005 phpBB Group
-* @license http://opensource.org/licenses/gpl-license.php GNU Public License
+* @copyright (c) phpBB Limited <https://www.phpbb.com>
+* @license GNU General Public License, version 2 (GPL-2.0)
 *
+* For full copyright and license information, please see
+* the docs/CREDITS.txt file.
+*
+*/
 */
 
 /**
@@ -41,9 +43,14 @@ $lang = array_merge($lang, array(
 
 	'DISPLAY_RESULTS'		=> 'Відображати результати як',
 
-	'FOUND_SEARCH_MATCH'		=> 'Пошук дав %d результат',
-	'FOUND_SEARCH_MATCHES'		=> 'Пошук дав %d результатів',
-	'FOUND_MORE_SEARCH_MATCHES'	=> 'Пошук дав більше ніж %d результатів',
+	'FOUND_SEARCH_MATCHES'		=> array(
+		1	=> 'Пошук дав %d результат',
+		2	=> 'Пошук дав %d результатів',
+	),
+	'FOUND_MORE_SEARCH_MATCHES'		=> array(
+		1	=> 'Пошук дав більше ніж %d результат',
+		2	=> 'Пошук дав більше ніж %d результатів',
+	),
 
 	'GLOBAL'				=> 'Загальне оголошення',
 
@@ -51,13 +58,13 @@ $lang = array_merge($lang, array(
 	'IGNORED_TERMS_EXPLAIN'	=> 'Наступні слова в вашому пошуковому запиті було проігноровано: <strong>%s</strong>',
 
 	'LOGIN_EXPLAIN_EGOSEARCH'            => 'На форумі вимагається бути зареєстрованим і залогованим для перегляду ваших повідомлень.',
-   'LOGIN_EXPLAIN_UNREADSEARCH' => 'Ви повинні бути зареєстровані та авторизовані в системі для перегляду непрочитаних повідомлень.',
-  'LOGIN_EXPLAIN_NEWPOSTS'	=> 'Ви повинні бути зареєстровані та авторизовані в системі для перегляду нових повідомлень з моменту вашого останнього візиту.',
-  'MAX_NUM_SEARCH_KEYWORDS_REFINE'   => 'Ви вказали занадто багато слів для пошуку. Будь-ласка, не вводьте більше %1$d слів.',
+	'LOGIN_EXPLAIN_UNREADSEARCH' => 'Ви повинні бути зареєстровані та авторизовані в системі для перегляду непрочитаних повідомлень.',
+	'LOGIN_EXPLAIN_NEWPOSTS'	=> 'Ви повинні бути зареєстровані та авторизовані в системі для перегляду нових повідомлень з моменту вашого останнього візиту.',
+	'MAX_NUM_SEARCH_KEYWORDS_REFINE'   => 'Ви вказали занадто багато слів для пошуку. Будь-ласка, не вводьте більше %1$d слів.',
 
 	'JUMP_TO_POST'			=> 'Перейти до повідомлення',
 
-	'NO_KEYWORDS'			=> 'Ви повинні задати хоча б одне слово для пошуку. Кожне слово повинне складатись не менше ніж з %d символів і не більше %d символів, не включаючи символ шаблону *.',
+	'NO_KEYWORDS'			=> 'Ви повинні задати хоча б одне слово для пошуку. Кожне слово повинне складатись не менше ніж з %d і не більше %d, не включаючи символ шаблону *.',
 	'NO_RECENT_SEARCHES'	=> 'Протягом останнього часу пошукових запитів не було.',
 	'NO_SEARCH'				=> 'Вибачте, але вам заборонено користуватись пошуковою системою.',
 	'NO_SEARCH_RESULTS'		=> 'Тем або повідомлень, які відповідають вашому запиту, не знайдено.',
@@ -67,6 +74,7 @@ $lang = array_merge($lang, array(
 	'WORDS_IN_NO_POST'		=> 'Відповідних повідомлень не знайдено, тому що слова <strong>%s</strong> не зустрічаються в жодному повідомленні на форумі.',
 
 	'POST_CHARACTERS'		=> 'символів повідомлень',
+	'PHRASE_SEARCH_DISABLED'	=> 'Пошук за точним збігом не підтримується на цьому форумі.',
 
 	'RECENT_SEARCHES'		=> 'Останні пошукові запити',
 	'RESULT_DAYS'			=> 'Шукати повідомлення за останні',
@@ -76,7 +84,6 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> 'Пошуковий запит',
 	'SEARCHED_TOPIC'			=> 'Пошук в темі',
-  'SEARCHED_QUERY'			=> 'Пошуковий запит',
 	'SEARCH_ALL_TERMS'			=> 'Шукати усі слова / Шукати використовуючи мову запитів',
 	'SEARCH_ANY_TERMS'			=> 'Шукати будь-яке слово',
 	'SEARCH_AUTHOR'				=> 'Шукати за автором',
@@ -100,7 +107,11 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'Заголовок повідомлення',
 	'SORT_TIME'					=> 'Час створення',
 
-	'TOO_FEW_AUTHOR_CHARS'	=> 'Ви повинні ввести як мінімум %d символів імені автора.',
-));
+	'SPHINX_SEARCH_FAILED'		=> 'Помилка пошуку: %s',
+	'SPHINX_SEARCH_FAILED_LOG'	=> 'На жаль, неможливо здійснити пошук. Додаткова інформація міститься в журналі помилок.',
 
-?>
+	'TOO_FEW_AUTHOR_CHARS'	=> array(
+		1	=> 'Ви повинні ввести як мінімум %d символ імені автора.',
+		2	=> 'Ви повинні задати як мінімум %d символів імені автора.',
+	),
+));

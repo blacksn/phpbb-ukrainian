@@ -1,12 +1,13 @@
 <?php
 /**
 *
-* acp_groups [Ukrainian]
+* This file is part of the phpBB Forum Software package.
 *
-* @package language
-* @version $Id: groups.php 9701 2009-06-28 12:13:11Z toonarmy $
-* @copyright (c) 2005 phpBB Group
-* @license http://opensource.org/licenses/gpl-license.php GNU Public License
+* @copyright (c) phpBB Limited <https://www.phpbb.com>
+* @license GNU General Public License, version 2 (GPL-2.0)
+*
+* For full copyright and license information, please see
+* the docs/CREDITS.txt file.
 *
 */
 
@@ -51,11 +52,14 @@ $lang = array_merge($lang, array(
 	'GROUP_APPROVED'	=> 'Схвалити учасників',
 	'GROUP_AVATAR'	=> 'Аватар групи',
 	'GROUP_AVATAR_EXPLAIN'	=> 'Це зображення буде відображатись в Панелі керування групами.',
+	'GROUP_CATEGORY_NAME'	=> 'Назва категорії',
 	'GROUP_CLOSED'	=> 'Закрита',
 	'GROUP_COLOR'	=> 'Колір групи',
 	'GROUP_COLOR_EXPLAIN'	=> 'Встановлює колір іменам користувачів групи, залиште порожнім для кольору за замовчуванням.',
-	'GROUP_CONFIRM_ADD_USER'		=> 'Ви впевнені, що хочете додати в групу користувача %1$s?',
-	'GROUP_CONFIRM_ADD_USERS'		=> 'Ви впевнені, що хочете додати в групу користувачів %1$s??',
+	'GROUP_CONFIRM_ADD_USERS'		=> array(
+		1	=> 'Ви впевнені, що хочете додати в групу користувача %1$s?',
+		2	=> 'Ви впевнені, що хочете додати в групу користувачів %1$s?',
+	),
 	'GROUP_CREATED'	=> 'Групу успішно створено.',
 	'GROUP_DEFAULT'	=> 'Зробити групою за замовчуванням для учасника',
 	'GROUP_DEFS_UPDATED'	=> 'Група за замовчуванням встановлена для обраних користувачів.',
@@ -72,7 +76,7 @@ $lang = array_merge($lang, array(
 	'GROUP_LANG'	=> 'Мова групи',
 	'GROUP_LEAD'	=> 'Лідери групи',
 	'GROUP_LEADERS_ADDED'	=> 'Нових лідерів групи додано успішно.',
-	'GROUP_LEGEND'	=> 'Відображати групу в поясненні',
+	'GROUP_LEGEND'	=> 'Відображати групу в легенді',
 	'GROUP_LIST'	=> 'Поточні учасники',
 	'GROUP_LIST_EXPLAIN'	=> 'Це повний список усіх поточних користувачів з членством в цій групі. Ви можете видаляти учасників (за винятком деяких спеціальних груп) або додавати нових.',
 	'GROUP_MEMBERS'	=> 'Учасники групи',
@@ -97,6 +101,8 @@ $lang = array_merge($lang, array(
 	'GROUP_SETTINGS_SAVE'	=> 'Налаштування групи',
  	'GROUP_SKIP_AUTH' => 'Позбавити лідера групи прав',
  	'GROUP_SKIP_AUTH_EXPLAIN' => 'Якщо увімкнено, то лідер групи не буде успадковувати права цієї групи.',
+	'GROUP_SPECIAL'		=> 'Попередньо визначена',
+	'GROUP_TEAMPAGE'				=> 'Відображати групу на сторінці інформації про команду',
 	'GROUP_TYPE'	=> 'Тип групи',
 	'GROUP_TYPE_EXPLAIN'	=> 'Це визначає, хто може приєднуватись або переглядати цю групу.',
 	'GROUP_UPDATED'	=> 'Налаштування групи успішно оновлено.',
@@ -104,20 +110,39 @@ $lang = array_merge($lang, array(
 	'GROUP_USERS_ADDED'	=> 'Нових користувачів успішно додано до групи.',
 	'GROUP_USERS_EXIST'	=> 'Обрані користувачі вже є учасниками групи.',
 	'GROUP_USERS_REMOVE'	=> 'Користувачі успішно видалені з групи і для них успішно встановлені нові групи за замовчуванням.',
+	'LEGEND_EXPLAIN'				=> 'Групи, котрі відображаються в легенді:',
+	'LEGEND_SETTINGS'				=> 'Налаштування легенди груп',
+	'LEGEND_SORT_GROUPNAME'			=> 'Сортувати по назві',
+	'LEGEND_SORT_GROUPNAME_EXPLAIN'	=> 'Вказаний нижче список буде проігноровано.',
+
+	'MANAGE_LEGEND'			=> 'Керування легендою груп',
+	'MANAGE_TEAMPAGE'		=> 'Керування відомостями про команду',
 
 	'MAKE_DEFAULT_FOR_ALL'	=> 'Зробити групою за замовчуванням для усіх її учасників',
 	'MEMBERS'	=> 'Учасники',
 
 	'NO_GROUP'	=> 'Група не визначена.',
+	'NO_GROUPS_ADDED'	=> 'Групи ще не додані.',
 	'NO_GROUPS_CREATED'	=> 'Групи ще не створені.',
 	'NO_PERMISSIONS'	=> 'Не копіювати права доступу',
+
 	'NO_USERS'	=> 'Ви не задали жодного користувача.',
-	'NO_VALID_USERS'			=> 'Ви не задали жодного користувача, який би підходив для цієї дії.',
-	
 	'NO_USERS_ADDED'         => 'Жодного користувача не було додано до групи.',
-	
+	'NO_VALID_USERS'			=> 'Ви не задали жодного користувача, який би підходив для цієї дії.',
+
+	'SELECT_GROUP'				=> 'Виберіть групу',
+
 	'SPECIAL_GROUPS'	=> 'Попередньо встановлені групи',
 	'SPECIAL_GROUPS_EXPLAIN'	=> 'Попередньо встановлені групи - це спеціальні групи, які не можуть бути видалені або змінені безпосередньо. Тим не менше, ви можете додавати користувачів в ці групи і змінювати основні налаштування цих груп.',
+	'TEAMPAGE'					=> 'Сторінка відомостей про команду',
+	'TEAMPAGE_DISP_ALL'			=> 'Всі групи',
+	'TEAMPAGE_DISP_DEFAULT'		=> 'Тільки група за замовчуванням',
+	'TEAMPAGE_DISP_FIRST'		=> 'Тільки перша група',
+	'TEAMPAGE_EXPLAIN'			=> 'Групи, котрі відображаються на сторінці відомостей про команду:',
+	'TEAMPAGE_FORUMS'			=> 'Показувати модеровані форуми',
+	'TEAMPAGE_FORUMS_EXPLAIN'	=> 'Якщо обратно "так", модератори будуть бачити список модерованих ними форумів. Це збільшує навантаження на базу даних на великих форумах.',
+	'TEAMPAGE_MEMBERSHIPS'		=> 'Показувати групи',
+	'TEAMPAGE_SETTINGS'			=> 'Налаштування сторінки відомостей про команду',
 
 	'TOTAL_MEMBERS'	=> 'Учасники',
 
@@ -129,5 +154,3 @@ $lang = array_merge($lang, array(
 	'USER_GROUP_DEFAULT_EXPLAIN'	=> 'Встановлює цю групу групою за замовчуванням для користувачів, які додаються в групу.',
 	'USER_GROUP_LEADER'	=> 'Зробити лідером групи',
 ));
-
-?>

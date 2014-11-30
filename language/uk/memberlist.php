@@ -1,12 +1,13 @@
 <?php
 /**
 *
-* memberlist [Ukrainian]
+* This file is part of the phpBB Forum Software package.
 *
-* @package language
-* @version $Id: memberlist.php 8574 2008-05-29 13:59:47Z Kellanved $
-* @copyright (c) 2005 phpBB Group
-* @license http://opensource.org/licenses/gpl-license.php GNU Public License
+* @copyright (c) phpBB Limited <https://www.phpbb.com>
+* @license GNU General Public License, version 2 (GPL-2.0)
+*
+* For full copyright and license information, please see
+* the docs/CREDITS.txt file.
 *
 */
 
@@ -36,13 +37,8 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, array(
-	'EMPTY_MESSAGE_IM'	=> 'Ви повинні вказати повідомлення для відправлення.',
+
 	'ALL'	=> 'Усі',
-	'SEND_AIM_MESSAGE'	=> 'Відіслати AIM-повідомлення',
-	'SEND_ICQ_MESSAGE'	=> 'Відіслати ICQ-повідомлення',
-	'SEND_JABBER_MESSAGE'	=> 'Відіслати Jabber-повідомлення',
-	'SEND_MSNM_MESSAGE'	=> 'Відіслати MSNM/WLM-повідомлення',
-	'SEND_YIM_MESSAGE'	=> 'Відіслати YIM-повідомлення',
 	'ABOUT_USER'	=> 'Профіль',
 	'ACTIVE_IN_FORUM'	=> 'Найбільша активність в форумі',
 	'ACTIVE_IN_TOPIC'	=> 'Найбільша активність в темі',
@@ -60,6 +56,7 @@ $lang = array_merge($lang, array(
 	'EMAIL_TOPIC_EXPLAIN'	=> 'Це повідомлення буде відправлене як звичайний текст, без коду HTML або BBCode. Зауважте, що інформація про тему вже включена в повідомлення. Зворотньою адресою для цього повідомлення буде вказана ваша адреса e-mail.',
 	'EMPTY_ADDRESS_EMAIL'	=> 'Ви повинні вказати правильну адресу e-mail одержувача.',
 	'EMPTY_MESSAGE_EMAIL'	=> 'Ви повинні ввести текст повідомлення для відправлення.',
+	'EMPTY_MESSAGE_IM'	=> 'Ви повинні вказати повідомлення для відправлення.',
 	'EMPTY_NAME_EMAIL'	=> 'Ви повинні ввести справжнє ім\'я одержувача.',
 	'EMPTY_SUBJECT_EMAIL'	=> 'Необхідно задати тему повідомлення e-mail.',
 	'EQUAL_TO'	=> 'рівне',
@@ -75,9 +72,9 @@ $lang = array_merge($lang, array(
 	'IM_JABBER'	=> 'Зауважте, що ці користувачі могли вимкнути отримання миттєвих повідомлень від невідомих.',
 	'IM_JABBER_SUBJECT'	=> 'Це повідомлення згенероване автоматично, будь-ласка, не відповідайте на нього! Повідомлення від користувача %1$s з %2$s',
 	'IM_MESSAGE'	=> 'Ваше повідомлення',
-	'IM_MSNM'	=> 'Зауважте, що для цього вам необхідно мати встановлений Windows Messenger.',
+	'IM_MSNM'	=> 'Зауважте, що для цього вам необхідно мати встановлений Windows Live Messenger.',
 	'IM_MSNM_BROWSER'	=> 'Ваш браузер не підтримує цю функцію.',
-	'IM_MSNM_CONNECT'	=> 'MSNM не відповідає.\\nДля продовження вам необхідно з\'єднатись з MSNM.',
+	'IM_MSNM_CONNECT'	=> 'WML не відповідає.\\nДля продовження вам необхідно з\'єднатись з MSNM.',
 	'IM_NAME'	=> 'Ваше ім\'я',
 	'IM_NO_JABBER'	=> 'Вибачте, відправка безпосередньо Jabber-користувачам не підтримується цим форумом. Вам необхідно мати встановлений Jabber-клієнт на вашому комп\'ютері для того, щоб зв\'язатись з цим користувачем.',
 	'IM_RECIPIENT'	=> 'Одержувач',
@@ -87,8 +84,10 @@ $lang = array_merge($lang, array(
 	'IM_USER'	=> 'Відправити миттєве повідомлення',
 	'LAST_ACTIVE'	=> 'Останнє відвідування',
 	'LESS_THAN'	=> 'менше ніж',
-	'LIST_USER'	=> '1 користувач',
-	'LIST_USERS'	=> '%d користувачів',
+	'LIST_USERS'				=> array(
+		1	=> '%d користувач',
+		2	=> '%d користувачів',
+	),
 	'LOGIN_EXPLAIN_LEADERS'	=> 'Ви повинні бути зареєстровані та залоговані для перегляду списку команди.',
 	'LOGIN_EXPLAIN_MEMBERLIST'	=> 'Ви повинні бути зареєстровані та залоговані для перегляду списку учасників.',
 	'LOGIN_EXPLAIN_SEARCHUSER'	=> 'Ви повинні бути зареєстровані та залоговані для пошуку учасників.',
@@ -104,10 +103,16 @@ $lang = array_merge($lang, array(
 	'RECIPIENT'	=> 'Одержувач',
 	'REMOVE_FOE'	=> 'Видалити з списку недругів',
 	'REMOVE_FRIEND'	=> 'Видалити з списку друзів',
+	'SEARCH_USER_POSTS'	=> 'Знайти усі повідомлення користувача',
 	'SELECT_MARKED'	=> 'Обрати відмічені',
 	'SELECT_SORT_METHOD'	=> 'Оберіть метод сортування',
 	'SEND_IM'	=> 'Миттєві повідомлення',
 	'SEND_MESSAGE'	=> 'Повідомлення',
+	'SEND_AIM_MESSAGE'	=> 'Відіслати AIM-повідомлення',
+	'SEND_ICQ_MESSAGE'	=> 'Відіслати ICQ-повідомлення',
+	'SEND_JABBER_MESSAGE'	=> 'Відіслати Jabber-повідомлення',
+	'SEND_MSNM_MESSAGE'	=> 'Відіслати WLM-повідомлення',
+	'SEND_YIM_MESSAGE'	=> 'Відіслати YIM-повідомлення',
 	'SORT_EMAIL'	=> 'E-mail',
 	'SORT_LAST_ACTIVE'	=> 'Останнє відвідування',
 	'SORT_POST_COUNT'	=> 'Кількість повідомлень',
@@ -117,7 +122,8 @@ $lang = array_merge($lang, array(
 	'USER_FORUM'	=> 'Статистика користувача',
  	'USER_LAST_REMINDED' => array (
  		0 => 'Немає надісланих нагадувань',
- 		1 => 'Надіслано %1$d нагадувань<br />» %2$s',
+ 		1 => 'Надіслано %1$d нагадування<br />» %2$s',
+		2 => 'Надіслано %1$d нагадувань<br />» %2$s',
  	),
 	'USER_ONLINE'	=> 'Онлайн',
 	'USER_PRESENCE'	=> 'Присутність на форумі',
@@ -125,5 +131,3 @@ $lang = array_merge($lang, array(
 	'VISITED'	=> 'Останній візит',
 	'WWW'	=> 'Вебсайт',
 ));
-
-?>

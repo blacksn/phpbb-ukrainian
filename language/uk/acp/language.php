@@ -1,12 +1,13 @@
 <?php
 /**
 *
-* acp_language [Ukrainian]
+* This file is part of the phpBB Forum Software package.
 *
-* @package language
-* @version $Id: language.php 9649 2009-06-21 19:17:20Z bantu $
-* @copyright (c) 2005 phpBB Group
-* @license http://opensource.org/licenses/gpl-license.php GNU Public License
+* @copyright (c) phpBB Limited <https://www.phpbb.com>
+* @license GNU General Public License, version 2 (GPL-2.0)
+*
+* For full copyright and license information, please see
+* the docs/CREDITS.txt file.
 *
 */
 
@@ -39,28 +40,16 @@ $lang = array_merge($lang, array(
 	'ACP_FILES'						=> 'Файли мов адміністратора',
 	'ACP_LANGUAGE_PACKS_EXPLAIN'	=> 'Тут ви маєте можливість встановлювати/видаляти мовні пакети. Мовний пакет, який використовується за замовчуванням на форумі, позначений зірочкою (*).',
 
-	'EMAIL_FILES'			=> 'Шаблони E-mail',
-
-	'FILE_CONTENTS'				=> 'Вміст файлу',
-	'FILE_FROM_STORAGE'			=> 'Файл з папки зберігання файлів',
-
-	'HELP_FILES'				=> 'Файли допомоги',
+	'DELETE_LANGUAGE_CONFIRM'		=> 'Ви впевнені, що хочете видалити “%s”?',
 
 	'INSTALLED_LANGUAGE_PACKS'	=> 'Встановлені мовні пакети',
-	'INVALID_LANGUAGE_PACK'		=> 'Обраний мовний пакет, скоріш за все, не є вірним. Будь-ласка, перевірте його і завантажте його ще раз при необхідності.',
-	'INVALID_UPLOAD_METHOD'		=> 'Обраний метод завантаження невірний, будь-ласка, оберіть інший.',
 
 	'LANGUAGE_DETAILS_UPDATED'			=> 'Інформація про мову успішно оновлено.',
-	'LANGUAGE_ENTRIES'					=> 'Мовні елементи',
-	'LANGUAGE_ENTRIES_EXPLAIN'			=> 'Тут ви можете змінити існуючі або ще неперекладені елементи мовного пакету.<br /><strong>Примітка:</strong> Якщо ви змінили файл мови, змінений файл буде збережено в окремій папці для завантаження його вами з сервера. Зміни не будуть видимі користувачам, поки ви не заміните старі файли мови на сервері (завантаживши нові туди).',
-	'LANGUAGE_FILES'					=> 'Файли мови',
-	'LANGUAGE_KEY'						=> 'Ключ мови',
 	'LANGUAGE_PACK_ALREADY_INSTALLED'	=> 'Цей мовний пакет вже встановлено.',
-	'LANGUAGE_PACK_DELETED'				=> 'Мовний пакет <strong>%s</strong> успішно видалено. Усім користувачам, які використовували цей мовний пакет, встановлено мовний пакет за замовчуванням.',
+	'LANGUAGE_PACK_DELETED'				=> 'Мовний пакет “%s” успішно видалено. Усім користувачам, які використовували цей мовний пакет, встановлено мовний пакет за замовчуванням.',
 	'LANGUAGE_PACK_DETAILS'				=> 'Інформація про мовний пакет',
-	'LANGUAGE_PACK_INSTALLED'			=> 'Мовний пакет <strong>%s</strong> успішно встановлено.',
+	'LANGUAGE_PACK_INSTALLED'			=> 'Мовний пакет “%s” успішно встановлено.',
 	'LANGUAGE_PACK_CPF_UPDATE'			=> 'Змінні мови додаткових полів профілю було скопійовано з мови за замовчуванням. Змініть їх при необхідності.',
-
 	'LANGUAGE_PACK_ISO'					=> 'ISO',
 	'LANGUAGE_PACK_LOCALNAME'			=> 'Локальна назва',
 	'LANGUAGE_PACK_NAME'				=> 'Назва',
@@ -72,7 +61,6 @@ $lang = array_merge($lang, array(
 	'LANG_ISO_CODE'						=> 'Код ISO',
 	'LANG_LOCAL_NAME'					=> 'Локальна назва',
 
-	'MISSING_LANGUAGE_FILE'		=> 'Відсутній файл мови: <strong style="color:red">%s</strong>',
 	'MISSING_LANG_VARIABLES'	=> 'Відсутні змінні мови',
 	'MODS_FILES'				=> 'Мовні файли MOD-ів',
 
@@ -81,24 +69,8 @@ $lang = array_merge($lang, array(
 	'NO_REMOVE_DEFAULT_LANG'		=> 'Ви не можете видалити мовний пакет за замовчуванням.<br />Якщо ви хочете видалити цей мовний пакет, спочатку змініть мову за замовчуванням.',
 	'NO_UNINSTALLED_LANGUAGE_PACKS'	=> 'Немає невстановлених мовних пакетів',
 
-	'REMOVE_FROM_STORAGE_FOLDER'		=> 'Видалити з папки зберігання',
-
-	'SELECT_DOWNLOAD_FORMAT'	=> 'Оберіть формат для завантаження',
-	'SUBMIT_AND_DOWNLOAD'		=> 'Відправити і завантажити файл з сервера',
-	'SUBMIT_AND_UPLOAD'			=> 'Відправити і завантажити файл на сервер',
-
 	'THOSE_MISSING_LANG_FILES'			=> 'Наступні мовні змінні відсутні в %s папці мови',
 	'THOSE_MISSING_LANG_VARIABLES'		=> 'Наступні мовні змінні відсутні в <strong>%s</strong> мовному пакеті',
 
 	'UNINSTALLED_LANGUAGE_PACKS'	=> 'Невстановлені мовні пакети',
-
-	'UNABLE_TO_WRITE_FILE'		=> 'Неможливо записати файл до %s.',
-	'UPLOAD_COMPLETED'			=> 'Завантаження пройшло успішно.',
-	'UPLOAD_FAILED'				=> 'Завантаження не відбулось з невідомих причин. Замініть при потребі необхідний файл вручну.',
-	'UPLOAD_METHOD'				=> 'Метод завантаження',
-	'UPLOAD_SETTINGS'			=> 'Налаштування завантаження',
-
-	'WRONG_LANGUAGE_FILE'		=> 'Обраний файл мови невірний.',
 ));
-
-?>

@@ -1,12 +1,13 @@
 <?php
 /**
 *
-* acp_search [Ukrainian]
+* This file is part of the phpBB Forum Software package.
 *
-* @package language
-* @version $Id: search.php,v 1.21 2007/10/04 15:07:24 acydburn Exp $
-* @copyright (c) 2005 phpBB Group
-* @license http://opensource.org/licenses/gpl-license.php GNU Public License
+* @copyright (c) phpBB Limited <https://www.phpbb.com>
+* @license GNU General Public License, version 2 (GPL-2.0)
+*
+* For full copyright and license information, please see
+* the docs/CREDITS.txt file.
 *
 */
 
@@ -53,14 +54,37 @@ $lang = array_merge($lang, array(
 	'DELETING_INDEX_IN_PROGRESS_EXPLAIN'	=> 'Відбувається видалення пошукового індексу. Це може тривати декілька хвилин.',
 
 	'FULLTEXT_MYSQL_INCOMPATIBLE_VERSION'	=> 'Повнотекстовий механізм пошуку MySQL може використовуватись з MySQL4 та вище.',
-  'FULLTEXT_MYSQL_NOT_SUPPORTED'			=> 'Повнотекстові індекси MySQL можуть використовуватись лише з таблицями MyISAM або InnoDB. Для повнотекстових індексів таблиць InnoDB необхідний MySQL версії 5.6.4 або пізнішої.',
+	'FULLTEXT_MYSQL_NOT_MYISAM'				=> 'Повнотекстові індекси MySQL можуть використовуватись лише з таблицями MyISAM.',
 	'FULLTEXT_MYSQL_TOTAL_POSTS'			=> 'Загальна кількість проіндексованих повідомлень',
-	'FULLTEXT_MYSQL_MBSTRING'				=> 'Підтримка нелатинcьких символів UTF-8 за допомогою mbstring:',
-	'FULLTEXT_MYSQL_PCRE'					=> 'Підтримка нелатинcьких символів UTF-8 за допомогою PCRE:',
-	'FULLTEXT_MYSQL_MBSTRING_EXPLAIN'		=> 'Якщо PCRE не має властивостей символів унікода, механізм пошуку буде намагатись використати механізм регулярних виразів mbstring.',
-	'FULLTEXT_MYSQL_PCRE_EXPLAIN'			=> 'Для цього пошукового механізму вимагає властивостей символів юнікод PCRE, які підтримуються лише в PHP 4.4, 5.1 та вище, якщо вам потрібно здійснювати пошук нелатинських символів.',
-   'FULLTEXT_MYSQL_MIN_SEARCH_CHARS_EXPLAIN'   => 'Слова з такою мінімальною кількістю символів буде проіндексовано для пошуку. Лише ви або ваш хостер може змінювати це налаштування, змінюючи конфігурацію MySQL.',
-  'FULLTEXT_MYSQL_MAX_SEARCH_CHARS_EXPLAIN'   => 'Слова з кількістю символів більше вказаної не буде проіндексовано  для пошуку. Лише ви або ваш хостер може змінювати це налаштування, змінюючи конфігурацію MySQL.',
+ 	'FULLTEXT_MYSQL_MIN_SEARCH_CHARS_EXPLAIN'   => 'Слова з такою мінімальною кількістю символів буде проіндексовано для пошуку. Лише ви або ваш хостер може змінювати це налаштування, змінюючи конфігурацію MySQL.',
+        'FULLTEXT_MYSQL_MAX_SEARCH_CHARS_EXPLAIN'   => 'Слова з кількістю символів більше вказаної не буде проіндексовано  для пошуку. Лише ви або ваш хостер може змінювати це налаштування, змінюючи конфігурацію MySQL.',
+
+	'FULLTEXT_POSTGRES_INCOMPATIBLE_DATABASE'	=> 'Механізм повнотекстового пошуку PostgreSQL може бути використано тільки з PostgreSQL.',
+	'FULLTEXT_POSTGRES_TOTAL_POSTS'			=> 'Загальна кількість проіндексованих повідомлень',
+	'FULLTEXT_POSTGRES_VERSION_CHECK'		=> 'Версія PostgreSQL',
+	'FULLTEXT_POSTGRES_TS_NAME'				=> 'Профіль конфігурації повнотекстового пошуку:',
+	'FULLTEXT_POSTGRES_MIN_WORD_LEN'			=> 'Мінімальна довжина пошукового запиту',
+	'FULLTEXT_POSTGRES_MAX_WORD_LEN'			=> 'Максимальна довжина пошукового запиту',
+	'FULLTEXT_POSTGRES_VERSION_CHECK_EXPLAIN'		=> 'Для даного пошукового механізму потрібний PostgreSQL версії 8.3 і вище.',
+	'FULLTEXT_POSTGRES_TS_NAME_EXPLAIN'				=> 'Профіль конфігурації повнотекстового пошуку, який використовується для визначення синтаксичного аналізатора і словника.',
+	'FULLTEXT_POSTGRES_MIN_WORD_LEN_EXPLAIN'			=> 'Слова, які складаються з не меншої кількості символів, ніж вказано, буде включено в запит до бази даних.',
+	'FULLTEXT_POSTGRES_MAX_WORD_LEN_EXPLAIN'			=> 'Слова, які складаються з не більшої кількості символів, ніж вказано, буде включено в запит до бази даних.',
+
+	'FULLTEXT_SPHINX_CONFIGURE'				=> 'Налаштуйте наступні параметри для створення файлу конфігурації sphinx',
+	'FULLTEXT_SPHINX_DATA_PATH'				=> 'Шлях до папки з даними',
+	'FULLTEXT_SPHINX_DATA_PATH_EXPLAIN'		=> 'Вказаний шлях буде використано для зберігання індексів і файлів журналів. Необхідно створити дану папку поза межами веб-доступних каталогів (Шлях повинен завершуватись правим слешем)',
+	'FULLTEXT_SPHINX_DELTA_POSTS'			=> 'Кількість повідомлень у часто оновлюваному дельта-індексі',
+	'FULLTEXT_SPHINX_HOST'					=> 'Сервер Sphinx',
+	'FULLTEXT_SPHINX_HOST_EXPLAIN'			=> 'Сервер, на якому запущено процес sphinx (searchd). Залиште значення порожнім для використання локального сервера за замовчуванням',
+	'FULLTEXT_SPHINX_INDEXER_MEM_LIMIT'		=> 'Обмеження пам\'яті для процесу індексування',
+	'FULLTEXT_SPHINX_INDEXER_MEM_LIMIT_EXPLAIN'	=> 'Дане значення повинне бути завжди меншим за доступний серверу об\'єм оперативної пам\'яті. Якщо виникають проблеми з продуктивністю, це може бути пов\'язано з надмірним споживанням ресурсів процесом індексування. Зменшення об\'єму доступної для нього пам\'яті може знизити навантаження на сервер.',
+	'FULLTEXT_SPHINX_MAIN_POSTS'			=> 'Кількість повідомлень в основному індексі',
+	'FULLTEXT_SPHINX_PORT'					=> 'Порт Sphinx',
+	'FULLTEXT_SPHINX_PORT_EXPLAIN'			=> 'Порт, по якому доступний процес sphinx (searchd). Залиште значення порожнім для використання порту за замовчуванням 9312',
+	'FULLTEXT_SPHINX_WRONG_DATABASE'		=> 'Пошуковий механізм sphinx для phpBB підтримує лише MySQL і PostgreSQL.',
+	'FULLTEXT_SPHINX_CONFIG_FILE'			=> 'Файл конфігурації Sphinx',
+	'FULLTEXT_SPHINX_CONFIG_FILE_EXPLAIN'	=> 'Вміст для створення файлу конфігурації sphinx. Ці дані повинні бути збережені в в файлі sphinx.conf, який використовується пошуковим процесом sphinx.',
+	'FULLTEXT_SPHINX_NO_CONFIG_DATA'		=> 'Шляхи до папок для збереження даних і конфігурації sphinx не задані. Будь-ласка, задайте їх, щоб можна було створити файл конфігурації.',
 
 	'GENERAL_SEARCH_SETTINGS'				=> 'Загальні налаштування пошуку',
 	'GO_TO_SEARCH_INDEX'					=> 'Перейти на сторінку індексування пошуку',
@@ -85,8 +109,17 @@ $lang = array_merge($lang, array(
 
 	'SEARCH_GUEST_INTERVAL'					=> 'Інтервал між запитами для гостей',
 	'SEARCH_GUEST_INTERVAL_EXPLAIN'			=> 'Час в секундах, через який гості зможуть здійснювати наступний пошук. Якщо один гість здійснює пошук, усі інші чекають, поки не пройде цей інтервал часу.',
-	'SEARCH_INDEX_CREATE_REDIRECT'			=> 'Усі повідомлення до повідомлення під номером %1$d проіндексовано, з яких %2$d повідомлень проіндексовано на даному кроці.<br />Поточна швидкість індексування - близько %3$.1f повідомлень в секунду.<br />Індексування в процесі…',
-	'SEARCH_INDEX_DELETE_REDIRECT'			=> 'Усі повідомлення до повідомлення під номером %1$d видалено з пошукового індексу.<br />Видалення в процесі…',
+
+	'SEARCH_INDEX_CREATE_REDIRECT'			=> array(
+		2	=> 'Усі повідомлення до повідомлення під номером %1$d проіндексовано, з яких %2$d повідомлень проіндексовано на даному кроці.<br />',
+	),
+	'SEARCH_INDEX_CREATE_REDIRECT_RATE'		=> array(
+		2	=> 'Поточна швидкість індексування - приблизно %1$.1f повідомлень в секунду.<br />Індексування в процесі…',
+	),
+	'SEARCH_INDEX_DELETE_REDIRECT'			=> array(
+		2	=> 'Усі повідомлення до повідомлення під номером %1$d видалено з пошукового індексу.<br />Видалення в процесі…',
+	),
+
 	'SEARCH_INDEX_CREATED'					=> 'Успішно проіндексовано усі повідомлення в базі даних форуму.',
 	'SEARCH_INDEX_REMOVED'					=> 'Успішно видалено пошуковий індекс для цього механізму.',
 	'SEARCH_INTERVAL'						=> 'Інтервал між пошуковими запитами',
@@ -105,5 +138,3 @@ $lang = array_merge($lang, array(
 	'YES_SEARCH_UPDATE'						=> 'Увімкнути повнотекстове оновлення',
 	'YES_SEARCH_UPDATE_EXPLAIN'				=> 'Оновлення повнотекстових індексів при розміщенні повідомлень, не працює при вимкненій функції пошуку.',
 ));
-
-?>

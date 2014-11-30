@@ -1,12 +1,13 @@
 <?php
 /**
 *
-* viewtopic [Ukrainian]
+* This file is part of the phpBB Forum Software package.
 *
-* @package language
-* @version $Id: viewtopic.php 8775 2008-08-21 15:41:12Z Kellanved $
-* @copyright (c) 2005 phpBB Group
-* @license http://opensource.org/licenses/gpl-license.php GNU Public License
+* @copyright (c) phpBB Limited <https://www.phpbb.com>
+* @license GNU General Public License, version 2 (GPL-2.0)
+*
+* For full copyright and license information, please see
+* the docs/CREDITS.txt file.
 *
 */
 
@@ -36,6 +37,7 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, array(
+	'APPROVE'			=> 'Схвалити',
 	'ATTACHMENT'						=> 'Приєднання файлів',
 	'ATTACHMENT_FUNCTIONALITY_DISABLED'	=> 'Функція приєднання файлів вимкнена.',
 
@@ -48,19 +50,22 @@ $lang = array_merge($lang, array(
 	'BUMP_TOPIC'			=> 'Підняти тему',
 
 	'CODE'					=> 'Код',
- 	'COLLAPSE_QR' => 'Приховати швидку відповідь',
-
+ 
 	'DELETE_TOPIC'			=> 'Видалити тему',
+	'DELETED_INFORMATION'	=> 'Видалено %2$s користувачем %1$s',
+	'DISAPPROVE'			=> 'Відхилити',
 	'DOWNLOAD_NOTICE'		=> 'У вас недостатньо прав для перегляду приєднаних до цього повідомлення файлів.',
 
-	'EDITED_TIMES_TOTAL'	=> 'Востаннє редагувалось %1$s в %2$s, всього редагувалось %3$d разів.',
-	'EDITED_TIME_TOTAL'		=> 'Востаннє редагувалось %1$s в %2$s, всього редагувалось %3$d раз.',
-	'EMAIL_TOPIC'			=> 'Повідомити друга по e-mail',
+	'EDITED_TIMES_TOTAL'	=> array(
+		1	=> 'Востаннє редагувалось %3$s користувачем %2$s, всього редагувалось %1$d раз.',
+		2	=> 'Востаннє редагувалось %3$s користувачем %2$s, всього редагувалось %1$d разів.',
+	),
+	'EMAIL_TOPIC'			=> 'Надіслати тему e-mail',
 	'ERROR_NO_ATTACHMENT'	=> 'Цей файл більше не існує',
 
 	'FILE_NOT_FOUND_404'	=> 'Файл <strong>%s</strong> не існує.',
 	'FORK_TOPIC'			=> 'Копіювати тему',
- 	'FULL_EDITOR' => 'Стандартна відповідь',
+ 	'FULL_EDITOR' => 'Стандартна відповідь і попередній перегляд',
 
 	'LINKAGE_FORBIDDEN'		=> 'Ви не авторизовані для перегляду і завантаження файлів з цього сайту.',
 	'LOGIN_NOTIFY_TOPIC'	=> 'Для перегляду цієї теми вам необхідно авторизуватись.',
@@ -70,8 +75,11 @@ $lang = array_merge($lang, array(
 	'MAKE_GLOBAL'				=> 'Змінити на “Важливо”',
 	'MAKE_NORMAL'				=> 'Змінити на “Звичайна”',
 	'MAKE_STICKY'				=> 'Змінити на “Прикріплено”',
-	'MAX_OPTIONS_SELECT'		=> 'Ви можете обрати до <strong>%d</strong> варіантів відповіді',
-	'MAX_OPTION_SELECT'			=> 'Ви можете обрати <strong>1</strong> варіант відповіді',
+	'MAX_OPTIONS_SELECT'		=> array(
+		1	=> 'Ви можете обрати  <strong>%d</strong> варіант відповіді',
+		2	=> 'Ви можете обрати до <strong>%d</strong> варіантів відповіді',
+	),
+
 	'MISSING_INLINE_ATTACHMENT'	=> 'Приєднаний файл <strong>%s</strong> більше недоступний',
 	'MOVE_TOPIC'				=> 'Перенести тему',
 
@@ -85,6 +93,7 @@ $lang = array_merge($lang, array(
 	'POLL_ENDED_AT'			=> 'Опитування закінчилось %s',
 	'POLL_RUN_TILL'			=> 'Опитування проводиться до %s',
 	'POLL_VOTED_OPTION'		=> 'Ви голосували за цей варіант',
+	'POST_DELETED_RESTORE'	=> 'Це повідомлення було видалено, але його можна відновити.',
 	'PRINT_TOPIC'			=> 'Версія для друку',
 
 	'QUICK_MOD'				=> 'Швидкі дії',
@@ -92,8 +101,10 @@ $lang = array_merge($lang, array(
 	'QUOTE'					=> 'Цитата',
 
 	'REPLY_TO_TOPIC'		=> 'Відповісти',
+	'RESTORE'				=> 'Відновити',
+	'RESTORE_TOPIC'			=> 'Відновити тему',
 	'RETURN_POST'			=> '%sПовернутись до повідомлення%s',
-	'SHOW_QR' => 'Швидка відповідь',
+
 	'SUBMIT_VOTE'			=> 'Проголосувати',
 
 	'TOTAL_VOTES'			=> 'Всього голосів',
@@ -104,12 +115,14 @@ $lang = array_merge($lang, array(
 	'VIEW_NEXT_TOPIC'		=> 'Наступна тема',
 	'VIEW_PREVIOUS_TOPIC'	=> 'Попередня тема',
 	'VIEW_RESULTS'			=> 'Переглянути результати',
-	'VIEW_TOPIC_POST'		=> '1 повідомлення',
-	'VIEW_TOPIC_POSTS'		=> '%d повідомлень',
+
+	'VIEW_TOPIC_POSTS'		=> array(
+		1	=> '%d повідомлення',
+		2	=> '%d повідомлень',
+	),
+
 	'VIEW_UNREAD_POST'		=> 'Перейти до першого непрочитаного повідомлення',
 	'VISIT_WEBSITE'			=> 'WWW',
 	'VOTE_SUBMITTED'		=> 'Ваш голос враховано.',
 	'VOTE_CONVERTED' => 'Зміна голосу не підтримується для конвертованих опитувань.',
 ));
-
-?>
