@@ -16,7 +16,7 @@
 */
 if (!defined('IN_PHPBB'))
 {
-  	exit;
+	exit;
 }
 
 if (empty($lang) || !is_array($lang))
@@ -226,7 +226,7 @@ $lang = array_merge($lang, array(
 	'EXTENSION_DISABLED_AFTER_POSTING'	=> 'Розширення <strong>%s</strong> було заборонено, приєднаний файл більше недоступний',
 	'EXTENSION_DOES_NOT_EXIST'			=> 'Розширення <strong>%s</strong> не існує.',
 
-   'FACEBOOK'	=> 'Facebook',
+	'FACEBOOK'	=> 'Facebook',
 	'FAQ'	=> 'Допомога',
 	'FAQ_EXPLAIN'	=> 'Часті питання',
 	'FILENAME'	=> 'Ім\'я файлу',
@@ -344,7 +344,7 @@ $lang = array_merge($lang, array(
 	'JUMP_PAGE'	=> 'Введіть номер сторінки, на яку бажаєте перейти',
 	'JUMP_TO'	=> 'Вперед',
 	'JUMP_TO_PAGE'	=> 'Перейти на сторінку',
-   'JUMP_TO_PAGE_CLICK'	=> 'Натисніть для переходу на сторінку…',
+	'JUMP_TO_PAGE_CLICK'	=> 'Натисніть для переходу на сторінку…',
 
 	'KB'	=> 'кБ',
 	'KIB'               => 'Кіб',
@@ -402,8 +402,7 @@ $lang = array_merge($lang, array(
 	'MESSAGES'	=> 'Повідомлень',
 	'MESSAGES_COUNT'		=> array(
 		1		=> '%d повідомлення',
-		2		=> '%d повідомлення',
-		3		=> '%d повідомлень',
+		2		=> '%d повідомлень',
 	),
 	'MESSAGE_BODY'	=> 'Текст повідомлення',
 	'MINUTES'	=> 'Хвилин',
@@ -423,6 +422,7 @@ $lang = array_merge($lang, array(
 	'NEW_POST'	=> 'Нове повідомлення',	// Not used anymore
 	'NEW_POSTS'	=> 'Нові повідомлення',	// Not used anymore
 	'NEXT'	=> 'Далі',
+	'NEXT_STEP'					=> 'Далі',
 	'NEVER'	=> 'Ніколи',
 	'NO'	=> 'Ні',
 	'NO_NOTIFICATIONS'			=> 'Немає сповіщень',
@@ -566,13 +566,13 @@ $lang = array_merge($lang, array(
 	'POSTED_ON_DATE'	=> 'від ',
 	'POSTS'	=> 'Повідомлень',
 	'POSTS_UNAPPROVED'	=> 'Як мінімум одне повідомлення в цій темі не було перевірено.',
-  'POSTS_UNAPPROVED_FORUM'=> 'Як мінімум одне повідомлення в цьому форумі не було перевірено.',
+	'POSTS_UNAPPROVED_FORUM'=> 'Як мінімум одне повідомлення в цьому форумі не було перевірено.',
 	'POST_BY_AUTHOR'	=> '',
 	'POST_BY_FOE'	=> 'Автором цього повідомлення є <strong>%1$s</strong>, який внесений до вашого чорного списку.',
 	'POST_DISPLAY'			=> '%1$sПоказати це повідомлення%2$s.',
 	'POST_DAY'	=> '%.2f повідомлень за день',
 	'POST_DELETED_ACTION'			=> 'Повідомлення видалено:',
-  'POST_DELETED'			=> 'Це повідомлення було видалено.',
+	'POST_DELETED'			=> 'Це повідомлення було видалено.',
 	'POST_DELETED_BY'		=> '<strong>%2$s</strong> видалив повідомлення автора <strong>%1$s</strong> %3$s.',
 	'POST_DELETED_BY_REASON'=> '<strong>%2$s</strong> видалив повідомлення автора <strong>%1$s</strong> %3$s з наступної причини: %4$s',
 	'POST_DETAILS'	=> 'Інформація про повідомлення',
@@ -586,7 +586,7 @@ $lang = array_merge($lang, array(
 	'POST_TIME'	=> 'Час розміщення',
 	'POST_TOPIC'			=> 'Створити нову тему',
 	'POST_UNAPPROVED_ACTION'	=> 'Повідомлення, яке очікує на перевірку:',
-  'POST_UNAPPROVED'		=> 'Це повідомлення не було перевірено.',
+	'POST_UNAPPROVED'		=> 'Це повідомлення не було перевірено.',
 	'POWERED_BY'			=> 'Працює на %s',
 	'PREVIEW'	=> 'Попередній перегляд',
 	'PREVIOUS'	=> 'Поперед.',
@@ -597,7 +597,7 @@ $lang = array_merge($lang, array(
 	'PRIVATE_MESSAGING'	=> 'Приватні повідомлення',
 	'PROFILE'	=> 'Панель керування',
 
-   'QUICK_LINKS'			=> 'Посилання',
+	'QUICK_LINKS'			=> 'Посилання',
  
 	'RANK'						=> 'Звання',
 	'READING_FORUM'	=> 'Переглядає повідомлення в %s',
@@ -705,8 +705,8 @@ $lang = array_merge($lang, array(
 	'START_WATCHING_TOPIC'	=> 'Підписатись на цю тему',
 	'STOP_WATCHING_FORUM'	=> 'Відписатись від цього форуму',
 	'STOP_WATCHING_TOPIC'	=> 'Відписатись від цієї теми',
-  'STRING_LIST_MULTI'			=> '%1$s, і %2$s',
-  'STRING_LIST_SIMPLE'		=> '%1$s і %2$s',
+	'STRING_LIST_MULTI'			=> '%1$s, і %2$s',
+	'STRING_LIST_SIMPLE'		=> '%1$s і %2$s',
 	'SUBFORUM'	=> 'Підфорум',
 	'SUBFORUMS'	=> 'Підфоруми',
 	'SUBJECT'	=> 'Тема',
@@ -770,7 +770,7 @@ $lang = array_merge($lang, array(
 		1	=> 'Всього %d приватне повідомлення',
 		2	=> 'Всього %d приватних повідомлень',
 	),
-   'TOPIC_POLL'		=> 'Ця тема має голосування.',
+	'TOPIC_POLL'		=> 'Ця тема має голосування.',
 	'TOTAL_POSTS'		=> 'Всього повідомлень:',
 	'TOTAL_POSTS_COUNT'	=> array(
 		2	=> 'Всього повідомлень: <strong>%d</strong>',
@@ -823,7 +823,7 @@ $lang = array_merge($lang, array(
 		1	=> 'Переглянуто %d раз',
 		2	=> 'Переглянуто %d разів',
 	),
-   'VIEWING_CONTACT_ADMIN'		=> 'Переглядає сторінку контактної інформації',
+	'VIEWING_CONTACT_ADMIN'		=> 'Переглядає сторінку контактної інформації',
 	'VIEWING_FAQ'	=> 'Переглядає FAQ',
 	'VIEWING_MEMBERS'	=> 'Переглядає список учасників',
 	'VIEWING_ONLINE'	=> 'Переглядає хто зараз онлайн',
@@ -862,7 +862,7 @@ $lang = array_merge($lang, array(
 	'WEBSITE'	=> 'Вебсайт',
 	'WHOIS'	=> 'Whois',
 	'WHO_IS_ONLINE'	=> 'Хто зараз онлайн',
-  'WLM'				=> 'WLM',
+	'WLM'				=> 'WLM',
 	'WRONG_PASSWORD'	=> 'Ви ввели невірний пароль.',
 
 	'WRONG_DATA_COLOUR'      => 'Введено невірне значення кольору.',
@@ -874,18 +874,18 @@ $lang = array_merge($lang, array(
 	'WRONG_DATA_TOPIC_SK'		=> 'Обрано невірне поле сортування тем.',,	
 	'WROTE'	=> 'писав',
 
-   'YAHOO'				=> 'Yahoo Messenger',
-  'YOUTUBE'			=> 'YouTube',
+	'YAHOO'				=> 'Yahoo Messenger',
+	'YOUTUBE'			=> 'YouTube',
 	'YEAR'	=> 'Рік',
 	'YEAR_MONTH_DAY'	=> '(РРРР-ММ-ДД)',
 	'YES'	=> 'Так',
 	'YOU_LAST_VISIT'	=> 'Ваш останній візит: %s',
 
 	'datetime'	=> array(
-	'TODAY'	=> 'Сьогодні',
-	'TOMORROW'	=> 'Завтра',
-	'YESTERDAY'	=> 'Вчора',
-	'AGO'		=> array(
+		'TODAY'	=> 'Сьогодні',
+		'TOMORROW'	=> 'Завтра',
+		'YESTERDAY'	=> 'Вчора',
+		'AGO'		=> array(
 			0		=> 'менше хвилини тому',
 			1		=> '%d хвилини тому',
 			2		=> '%d хвилин тому',
