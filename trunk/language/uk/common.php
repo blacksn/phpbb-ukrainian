@@ -43,9 +43,10 @@ if (empty($lang) || !is_array($lang))
 $lang = array_merge($lang, array(
 	'TRANSLATION_INFO'	=> 'Український переклад &copy 2005-2014 <a class="copyright" target="_blank" href="http://phpbb.com.ua/">Українська підтримка phpBB</a>',
 	'DIRECTION'	=> 'ltr',
-	'DATE_FORMAT'	=> '|d M Y|',
+	'DATE_FORMAT'	=> '|d M Y|',	// 01 Jan 2007 (with Relative days enabled)
 	'DATETIME_FORMAT'	=> '|d M Y, H:i|',	// 01 Jan 2007, 13:37 (with Relative days enabled)
 	'USER_LANG'	=> 'uk',
+
 	// You can define different rules for the determination of plural forms here.
 	// See http://wiki.phpbb.com/Plural_Rules for more information
 	// or ask the translation manager for help.
@@ -146,6 +147,7 @@ $lang = array_merge($lang, array(
 	'BUTTON_TOPIC_LOCKED'	=> 'Закрито',
 	'BYTES'	=> 'байт',
 	'BYTES_SHORT'			=> 'Б',
+
 	'CANCEL'	=> 'Скасувати',
 	'CHANGE'	=> 'Змінити',
 	'CHANGE_FONT_SIZE'	=> 'Змінити розмір шрифту',
@@ -190,8 +192,6 @@ $lang = array_merge($lang, array(
 	'DISPLAY_MESSAGES'	=> 'Показувати теми за',
 	'DISPLAY_POSTS'	=> 'Показувати повідомлення за',
 	'DISPLAY_TOPICS'	=> 'Показувати теми за',
-	'DOWNLOAD_ALL'			=> 'Download all',
-	'DOWNLOAD_ALL_ATTACHMENTS'	=> 'Download all attachments',
 	'DOWNLOADED'	=> 'Кількість завантажень',
 	'DOWNLOADING_FILE'	=> 'Завантаження файлу',
 	'DOWNLOAD_COUNTS'		=> array(
@@ -200,21 +200,17 @@ $lang = array_merge($lang, array(
 		2	=> 'Завантажено %d разів',
 	),
 
-	'VIEWED_COUNT'	=> 'Переглянуто %d раз',
-	'VIEWED_COUNTS'	=> 'Переглянуто %d разів',
-	'VIEWED_COUNT_NONE'	=> 'Ще не переглядалось',
-
 	'EDIT_POST'	=> 'Редагувати повідомлення',
 	'ELLIPSIS'							=>	'…',
 	'EMAIL'	=> 'E-mail', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'	=> 'Адреса e-mail',
+	'EMAIL_INVALID_EMAIL'				=> 'Введена вами адреса email невірна.',
 	'EMAIL_SMTP_ERROR_RESPONSE'	=> 'Помилка при відправленні e-mail в <strong>стрічці %1$s</strong>. Відповідь сервера: %2$s',
 	'EMPTY_SUBJECT'	=> 'При створенні нової теми необхідно вказати заголовок.',
 	'EMPTY_MESSAGE_SUBJECT'	=> 'Ви повинні вказати тему при створенні нового повідомлення.',
 	'ENABLED'	=> 'Увімкнено',
 	'ENCLOSURE'	=> 'Обмежувач',
 	'ENTER_USERNAME'					=> 'Введіть ім\'я користувача',
-
 	'ERR_JAB_AUTH'						=> 'Не вдалось авторизуватись на сервері Jabber.',
 	'ERR_JAB_CONNECT'					=> 'Не вдалось під\'єднатись до сервера Jabber.',
 	'ERR_CHANGING_DIRECTORY'	=> 'Невдалось змінити директорію.',
@@ -270,6 +266,7 @@ $lang = array_merge($lang, array(
 	'FTP_FSOCK_TIMEOUT_EXPLAIN'	=> 'Час в секундах, впродовж якого система буде чекати на відповідь FTP-сервера.',
 	'FTP_FSOCK_USERNAME'	=> 'Ім\'я користувача FTP',
 	'FTP_FSOCK_USERNAME_EXPLAIN'	=> 'Ім\'я користувача, яке використовується для з\'єднання з FTP-сервером.',
+
 	'FTP_HOST'	=> 'FTP-сервер',
 	'FTP_HOST_EXPLAIN'	=> 'FTP-сервер для з\'єднання з вашим сайтом.',
 	'FTP_PASSWORD'	=> 'Пароль FTP',
@@ -282,6 +279,7 @@ $lang = array_merge($lang, array(
 	'FTP_TIMEOUT_EXPLAIN'	=> 'Час в секундах, впродовж якого система буде чекати на відповідь FTP-сервера.',
 	'FTP_USERNAME'	=> 'Ім\'я користувача FTP',
 	'FTP_USERNAME_EXPLAIN'	=> 'Ім\'я користувача, яке використовується для з\'єднання з FTP-сервером.',
+
 	'GENERAL_ERROR'	=> 'Критична помилка',
 	'GB'                  => 'ГБ',
 	'GIB'                  => 'ГіБ',
@@ -324,6 +322,7 @@ $lang = array_merge($lang, array(
 	'HIDE_ME'	=> 'Приховати моє перебування на форумі цього разу',
 	'HOURS'	=> 'Години',
 	'HOME'	=> 'Головна',
+
 	'ICQ'	=> 'ICQ',
 	'IF'	=> 'якщо',
 	'IMAGE'	=> 'Зображення',
@@ -339,14 +338,17 @@ $lang = array_merge($lang, array(
 	'INVALID_PLURAL_RULE'		=> 'Обрано невірне правило для множини. Правильними є цілі числа між 0 і 15.',
 	'IP'	=> 'IP',
 	'IP_BLACKLISTED'	=> 'Ваш IP %1$s заблоковано, тому що його внесено до чорного списку. Для додаткової інформації дивіться <a href="%2$s">%2$s</a>.',
+
 	'JABBER'	=> 'Jabber',
 	'JOINED'	=> 'З нами з',
 	'JUMP_PAGE'	=> 'Введіть номер сторінки, на яку бажаєте перейти',
 	'JUMP_TO'	=> 'Вперед',
 	'JUMP_TO_PAGE'	=> 'Перейти на сторінку',
  	'JUMP_TO_PAGE_CLICK'	=> 'Натисніть для переходу на сторінку…',
+
 	'KB'	=> 'кБ',
 	'KIB'               => 'Кіб',
+
 	'LAST_POST'	=> 'Останнє повідомлення',
 	'LAST_UPDATED'	=> 'Востаннє оновлено',
 	'LAST_VISIT'	=> 'Останнє відвідування',
@@ -379,9 +381,11 @@ $lang = array_merge($lang, array(
 	'LOGOUT'	=> 'Вихід',
 	'LOGOUT_USER'	=> 'Вихід [ %s ]',
 	'LOG_ME_IN'	=> 'Запам\'ятати мене',
+
 	'MAIN'					=> 'Головна',   
 	'MARK'	=> 'Позначити',
 	'MARK_ALL'	=> 'Позначити усі',
+	'MARK_ALL_READ'			=> 'Позначити всі прочитаними',
 	'MARK_FORUMS_READ'	=> 'Позначити всі форуми прочитаними',
 	'MARK_READ'				=> 'Позначити прочитаними',
 	'MARK_SUBFORUMS_READ'	=> 'Позначити всі підфоруми прочитаними',
@@ -392,6 +396,7 @@ $lang = array_merge($lang, array(
 	'MEMBERLIST'	=> 'Учасники',
 	'MEMBERLIST_EXPLAIN'	=> 'Переглянути повний список учасників',
 	'MERGE'	=> 'Об\'єднати',
+	'MERGE_POSTS'			=> 'Перемістити повідомлення',
 	'MERGE_TOPIC'	=> 'Об\'єднати тему',
 	'MESSAGE'	=> 'Повідомлення',
 	'MESSAGES'	=> 'Повідомлень',
@@ -410,6 +415,7 @@ $lang = array_merge($lang, array(
 	'MODULE_FILE_RIGHT_CLASS'	=> 'Файл модуля %s не містить необхідного класу [%s]',
 	'MONTH'	=> 'Місяць',
 	'MOVE'	=> 'Перемістити',
+
 	'NA'	=> 'Н/Д',
 	'NEWEST_USER'	=> 'Останній зареєстрований учасник: <strong>%s</strong>',
 	'NEW_MESSAGE'	=> 'Нове повідомлення',
@@ -425,20 +431,18 @@ $lang = array_merge($lang, array(
 	'NOT_WATCHING_FORUM'	=> 'Ви більше не слідкуєте за повідомленнями в цьому форумі.',
 	'NOT_WATCHING_TOPIC'	=> 'Ви більше не слідкуєте за цією темою.',
 	'NOTIFICATIONS'				=> 'Notifications',
-! 	// This applies for NOTIFICATION_BOOKMARK and NOTIFICATION_POST.
-! 	// %1$s will return a list of users that's concatenated using "," and "and" - see STRING_LIST
-! 	// Once the user count reaches 5 users or more, the list is trimmed using NOTIFICATION_X_OTHERS
-! 	// Once the user count reaches 20 users or more, the list is trimmed using NOTIFICATION_MANY_OTHERS
-! 	// Examples:
-! 	// A replied...
-! 	// A and B replied...
-! 	// A, B and C replied...
-! 	// A, B, C and 2 others replied...
-! 	// A, B, C and others replied...
+ 	// This applies for NOTIFICATION_BOOKMARK and NOTIFICATION_POST.
+ 	// %1$s will return a list of users that's concatenated using "," and "and" - see STRING_LIST
+ 	// Once the user count reaches 5 users or more, the list is trimmed using NOTIFICATION_X_OTHERS
+ 	// Once the user count reaches 20 users or more, the list is trimmed using NOTIFICATION_MANY_OTHERS
+ 	// Examples:
+ 	// A replied...
+ 	// A and B replied...
+ 	// A, B and C replied...
+ 	// A, B, C and 2 others replied...
+ 	// A, B, C and others replied...
 	'NOTIFICATION_BOOKMARK'				=> array(
 		1	=> '<strong>Відповідь</strong> від користувача %1$s в темі, що знаходиться у вас в закладках:',
-		2	=> '<strong>Відповідь</strong> від користувача %1$s в темі, що знаходиться у вас в закладках:',
-		3	=> '<strong>Відповідь</strong> від користувача %1$s в темі, що знаходиться у вас в закладках:',
 	),
 	'NOTIFICATION_FORUM'				=> '<em>Форум:</em> %1$s',
 	'NOTIFICATION_GROUP_REQUEST'    	=> '<strong>Запит</strong> від користувача %1$s на вступ до групи %2$s.',
@@ -446,16 +450,12 @@ $lang = array_merge($lang, array(
 	'NOTIFICATION_PM'					=> '<strong>Приватне повідомлення</strong> від користувача %1$s:',
 	'NOTIFICATION_POST'					=> array(
 		1	=> '<strong>Відповідь</strong> від користувача %1$s в темі:',
-		2	=> '<strong>Відповідь</strong> від користувача %1$s в темі:',
-		3	=> '<strong>Відповідь</strong> від користувача %1$s в темі:',
 	),
 	'NOTIFICATION_POST_APPROVED'		=> '<strong>Повідомлення схвалено</strong>:',
 	'NOTIFICATION_POST_DISAPPROVED'		=> '<strong>Повідомлення відхилено</strong>:',
 	'NOTIFICATION_POST_IN_QUEUE'		=> 'Запит на <strong>схвалення повідомлення</strong> від користувача %1$s:',
 	'NOTIFICATION_QUOTE'				=> array(
 		1	=> '<strong>Цитата</strong> від користувача %1$s в повідомленні:',
-		2	=> '<strong>Цитата</strong> від користувача %1$s в повідомленні:',
-		3	=> '<strong>Цитата</strong> від користувача %1$s в повідомленні:',
 	),
 	'NOTIFICATION_REFERENCE'			=> '"%1$s"',
 	'NOTIFICATION_REASON'				=> '<em>Причина:</em> %1$s.',
@@ -471,9 +471,7 @@ $lang = array_merge($lang, array(
 	// Used in conjuction with NOTIFICATION_BOOKMARK and NOTIFICATION_POST.
 	'NOTIFICATION_MANY_OTHERS'			=> 'інших',
 	'NOTIFICATION_X_OTHERS'				=> array(
-		1		=> 'ще %d користувача',
 		2		=> '%d інших',
-		3		=> '%d інших',
 	),
 	'NOTIFY_ADMIN'	=> 'Будь-ласка, повідомте адміністратора форуму або вебмайстра.',
 	'NOTIFY_ADMIN_EMAIL'	=> 'Будь-ласка повідомте адміністратора форуму або вебмайстра: <a href="mailto:%1$s">%1$s</a>',
@@ -505,6 +503,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'	=> 'За обраний період часу немає повідомлень.',
 	'NO_FEED_ENABLED' => 'Канали новин недоступні на цьому форумі.',
 	'NO_FEED' => 'Заданий канал новин недоступний.',
+	'NO_STYLE_DATA'				=> 'Не вдалось отримати дані стилю',
 	'NO_SUBJECT'	=> 'Тему не задано',
 	'NO_SUCH_SEARCH_MODULE'	=> 'За заданими критеріями нічого не знайдено.',
 	'NO_SUPPORTED_AUTH_METHODS'	=> 'Метод автентифікації не підтримується.',
@@ -512,22 +511,23 @@ $lang = array_merge($lang, array(
 	'NO_TOPIC_FORUM'	=> 'Тема або форум більше не існує.',
 	'NO_TOPICS'	=> 'В цьому форумі немає повідомлень.',
 	'NO_TOPICS_TIME_FRAME'	=> 'Форум не містить тем за даний період часу.',
-	'NO_UPLOAD_FORM_FOUND'	=> 'Завантаження файлу на сервер ініційоване, але доступний для завантаження файл не знайдено.',
 	'NO_UNREAD_POSTS'         => 'Немає непрочитаних повідомлень',
+	'NO_UPLOAD_FORM_FOUND'	=> 'Завантаження файлу на сервер ініційоване, але доступний для завантаження файл не знайдено.',
 	'NO_USER'	=> 'Заданого користувача не знайдено.',
 	'NO_USERS'	=> 'Заданих користувачів не знайдено.',
 	'NO_USER_SPECIFIED'	=> 'Не задане ім\'я користувача.',
-
 
   	// Nullar/Singular/Plural language entry. The key numbers define the number range in which a certain grammatical expression is valid.
  	'NUM_ATTACHMENTS'		=> array(
  		1	=> '%d приєднаний файл',
  		2	=> '%d приєднаних файлів',
- 	),   	'NUM_POSTS_IN_QUEUE'      => array(
-     	 0         => 'Немає повідомлень у черзі',      // 0
-     	 1         => '1 повідомлення у черзі',      // 1
-	 2         => '%d повідомлень у черзі',      // 2+
-	 ),
+ 	),   	
+	'NUM_POSTS_IN_QUEUE'      => array(
+     	 	0         => 'Немає повідомлень у черзі',      // 0
+     	 	1         => '1 повідомлення у черзі',      // 1
+	 	2         => '%d повідомлень у черзі',      // 2+
+	),
+
 	'OCCUPATION'	=> 'Рід занять',
 	'OFFLINE'	=> 'Офлайн',
 	'ONLINE'	=> 'Онлайн',
@@ -554,7 +554,6 @@ $lang = array_merge($lang, array(
 	),
 	'PLAY_QUICKTIME_FILE'	=> 'Відтворити файл Quicktime',
 	'PLEASE_WAIT'			=> 'Зачекайте, будь-ласка.',
-
 	'PM'	=> 'ПП',
 	'PM_REPORTED'         => 'Натисніть для перегляду звіту',
 	'POSTING_MESSAGE'	=> 'Розміщення повідомлення в %s',
@@ -585,21 +584,25 @@ $lang = array_merge($lang, array(
 	'POST_REPORTED'	=> 'Переглянути скаргу',
 	'POST_SUBJECT'	=> 'Тема повідомлення',
 	'POST_TIME'	=> 'Час розміщення',
+	'POST_TOPIC'			=> 'Створити нову тему',
 	'POST_UNAPPROVED_ACTION'	=> 'Повідомлення, яке очікує на перевірку:',
  	'POST_UNAPPROVED'		=> 'Це повідомлення не було перевірено.',
 	'POWERED_BY'			=> 'Працює на %s',
 	'PREVIEW'	=> 'Попередній перегляд',
 	'PREVIOUS'	=> 'Поперед.',
+	'PREVIOUS_STEP'			=> 'Поперед.',
 	'PRIVACY'	=> 'Заява про конфіденційність',
 	'PRIVATE_MESSAGE'	=> 'Приватне повідомлення',
 	'PRIVATE_MESSAGES'	=> 'Приватні повідомлення',
 	'PRIVATE_MESSAGING'	=> 'Приватні повідомлення',
 	'PROFILE'	=> 'Панель керування',
+
  	'QUICK_LINKS'			=> 'Посилання',
  
 	'RANK'						=> 'Звання',
 	'READING_FORUM'	=> 'Переглядає повідомлення в %s',
 	'READING_GLOBAL_ANNOUNCE'	=> 'Читає загальне оголошення',
+	'READING_LINK'				=> 'Переходить за посиланням %s',
 	'READING_TOPIC'	=> 'Переглядає тему в %s',
 	'READ_PROFILE'	=> 'Профіль',
 	'REASON'	=> 'Причина',
@@ -655,6 +658,7 @@ $lang = array_merge($lang, array(
 	'RULES_REPLY_CANNOT'	=> 'Ви <strong>не можете</strong> відповідати на теми у цьому форумі',
 	'RULES_VOTE_CAN'	=> 'Ви <strong>можете</strong> голосувати у цьому форумі',
 	'RULES_VOTE_CANNOT'	=> 'Ви <strong>не можете</strong> голосувати у цьому форумі',
+
 	'SEARCH'	=> 'Пошук',
 	'SEARCH_MINI'	=> 'Пошук...',
 	'SEARCH_ADV'	=> 'Розширений пошук',
@@ -707,28 +711,35 @@ $lang = array_merge($lang, array(
 	'SUBFORUMS'	=> 'Підфоруми',
 	'SUBJECT'	=> 'Тема',
 	'SUBMIT'	=> 'Відіслати',
+
+	'TB'				=> 'ТБ',
 	'TERMS_USE'	=> 'Правила використання',
 	'TEST_CONNECTION'	=> 'Перевірити з\'єднання',
 	'THE_TEAM'	=> 'Команда',
+	'TIB'				=> 'ТіБ',
 	'TIME'	=> 'Час',
-
 	'TIMEOUT_PROCESSING_REQ'			=> 'Час виконання запиту сплив.',
 
 	'TOO_LARGE'                  => 'Значення, яке ви ввели є занадто великим.',
 	'TOO_LARGE_MAX_RECIPIENTS'      => 'Введене вами значення налаштування <strong>Максимально дозволена кількість одержувачів приватного повідомлення</strong> є занадто великим.',
+
 	'TOO_LONG'                  => 'Введене вами значення занадто довге.',
+
 	'TOO_LONG_CONFIRM_CODE'	=> 'Введений вами код підтвердження надто довгий.',
+	'TOO_LONG_DATEFORMAT'			=> 'Введений вами формат дати надто довгий.',
 	'TOO_LONG_JABBER'	=> 'Введене вами ім\'я облікового запису jabber надто довге.',
 	'TOO_LONG_NEW_PASSWORD'	=> 'Введений вами пароль надто довгий.',
 	'TOO_LONG_PASSWORD_CONFIRM'	=> 'Введене вами підтвердження паролю надто довге.',
 	'TOO_LONG_USER_PASSWORD'	=> 'Введений вами пароль надто довгий.',
 	'TOO_LONG_USERNAME'	=> 'Введене вами ім\'я користувача надто довге.',
 	'TOO_LONG_EMAIL'	=> 'Введена вами адреса e-mail надто довга.',
-	'TOO_SMALL'                  => 'Значення, яке ви ввели є занадто малим.',
-	'TOO_SMALL_MAX_RECIPIENTS'      => 'Введене вами значення налаштування <strong>Максимально дозволена кількість одержувачів приватного повідомлення</strong> є занадто малим.',
+
 	'TOO_MANY_VOTE_OPTIONS'	=> 'Ви вибрали надто багато варіантів при голосуванні.',
+
 	'TOO_SHORT'                  => 'Введене вами значення занадто коротке.',
+
 	'TOO_SHORT_CONFIRM_CODE'	=> 'Введений вами код підтвердження надто короткий.',
+	'TOO_SHORT_DATEFORMAT'			=> 'Введений вами формат дати надто короткий.',
 	'TOO_SHORT_JABBER'	=> 'Введене вами ім\'я облікового запису jabber надто коротке.',
 	'TOO_SHORT_NEW_PASSWORD'	=> 'Введений вами пароль надто короткий.',
 	'TOO_SHORT_PASSWORD_CONFIRM'	=> 'Введене вами підтвердження паролю надто коротке.',
@@ -736,6 +747,9 @@ $lang = array_merge($lang, array(
 	'TOO_SHORT_USERNAME'	=> 'Введене вами ім\'я користувача надто коротке.',
 	'TOO_SHORT_EMAIL'	=> 'Введена вами адреса e-mail надто коротка.',
  	'TOO_SHORT_EMAIL_CONFIRM'		=> 'Введена вами адреса e-mail для підтвердження надто коротка.',
+	'TOO_SMALL'                  => 'Значення, яке ви ввели є занадто малим.',
+	'TOO_SMALL_MAX_RECIPIENTS'      => 'Введене вами значення налаштування <strong>Максимально дозволена кількість одержувачів приватного повідомлення</strong> є занадто малим.',
+
 	'TOPIC'	=> 'Тема',
 	'TOPICS'	=> 'Тем',
 	'TOPICS_UNAPPROVED' => 'Принаймні одну тему в цьому форумі не було схвалено.',
@@ -770,6 +784,7 @@ $lang = array_merge($lang, array(
 	),
 	'TRACKED_PHP_ERROR'	=> 'Відстежено помилок PHP: %s',
  	'TWITTER'			=> 'Twitter',
+
 	'UNABLE_GET_IMAGE_SIZE'	=> 'Неможливо визначити розміри зображення.  Переконайтеся, що посилання на зображення корректне.',
 	'UNABLE_TO_DELIVER_FILE'	=> 'Неможливо доставити файл.',
 	'UNKNOWN_BROWSER'	=> 'Невідомий браузер',
@@ -783,6 +798,7 @@ $lang = array_merge($lang, array(
 	'UNWATCH_TOPIC_DETAILED'	=> 'Ви впевнені, що бажаєте відписатись від теми “%s”?',
 	'UNWATCHED_FORUMS'	=> 'Відтепер ви не слідкуєте за вибраними форумами.',
 	'UNWATCHED_TOPICS'	=> 'Відтепер ви не слідкуєте за вибраними темами.',
+	'UNWATCHED_FORUMS_TOPICS'	=> 'Відтепер ви не слідкуєте за вибраним.',
 	'UPDATE'	=> 'Оновити',
 	'UPLOAD_IN_PROGRESS'	=> 'Відбувається завантаження.',
 	'URL_REDIRECT'	=> 'Якщо ваш браузер не підтримує автоматичний перехід, будь-ласка, %sнатисніть сюди%s для переходу.',
@@ -797,7 +813,9 @@ $lang = array_merge($lang, array(
 	),
 	'USERS'	=> 'Користувачі',
 	'USE_PERMISSIONS'	=> 'Перевірити права користувачів.',
+
 	'USER_NEW_PERMISSION_DISALLOWED' => 'Вам не дозволено використовувати цю можливість. Можливо, ви недавно зареєструвались на форумі, або вам необхідно проявити більше активності, щоб отримати можливість її використання.',
+
 	'VARIANT_DATE_SEPARATOR'	=> ' / ',
 	'VIEWED'	=> 'Переглянуто',
 	'VIEWED_COUNTS'		=> array(
@@ -833,6 +851,7 @@ $lang = array_merge($lang, array(
 	'VIEW_TOPIC_POLL'	=> 'Опитування: ',
 	'VIEW_TOPIC_STICKY'	=> 'Прикріплена: ',
 	'VISIT_WEBSITE'	=> 'Відвідати вебсайт',
+
 	'WARNINGS'	=> 'Попередження',
 	'WARN_USER'	=> 'Зробити попередження',
 	'WATCH_FORUM_CONFIRM'	=> 'Ви впевнені, що бажаєте підписатись на цей форум?',
@@ -845,6 +864,7 @@ $lang = array_merge($lang, array(
 	'WHO_IS_ONLINE'	=> 'Хто зараз онлайн',
  	'WLM'				=> 'WLM',
 	'WRONG_PASSWORD'	=> 'Ви ввели невірний пароль.',
+
 	'WRONG_DATA_COLOUR'      => 'Введено невірне значення кольору.',
 	'WRONG_DATA_JABBER'	=> 'Введене вами ім\'я не є правильним обліковим записом jabber.',
 	'WRONG_DATA_LANG'	=> 'Вказано неправильну мову.',
@@ -853,22 +873,13 @@ $lang = array_merge($lang, array(
 	'WRONG_DATA_TOPIC_SD'		=> 'Обрано невірний метод сортування тем.',
 	'WRONG_DATA_TOPIC_SK'		=> 'Обрано невірне поле сортування тем.',,	
 	'WROTE'	=> 'писав',
+
  	'YAHOO'				=> 'Yahoo Messenger',
  	'YOUTUBE'			=> 'YouTube',
 	'YEAR'	=> 'Рік',
 	'YEAR_MONTH_DAY'	=> '(РРРР-ММ-ДД)',
 	'YES'	=> 'Так',
 	'YOU_LAST_VISIT'	=> 'Ваш останній візит: %s',
-	'TOO_LONG_DATEFORMAT'	=> 'Введений вами формат дати занадто довгий.',
-	'TOO_SHORT_DATEFORMAT'	=> 'Введений вами формат дати надто короткий.',
-	'UNWATCHED_FORUMS_TOPICS'	=> 'Ви відписались від обраних тем.',
-	'MERGE_POSTS'	=> 'Перемістити повідомлення',
-   
-	'NEXT_STEP'	=> 'Далі',
-	'POST_TOPIC'	=> 'Створити нову тему',
-	'PREVIOUS_STEP'	=> 'Назад',
-	'READING_LINK'	=> 'Переглядає  %s',
-	'SEND_EMAIL_USER'	=> 'Надіслати е-mail користувачу',
 
 	'datetime'	=> array(
 	'TODAY'	=> 'Сьогодні',
@@ -879,6 +890,7 @@ $lang = array_merge($lang, array(
 			1		=> '%d хвилини тому',
 			2		=> '%d хвилин тому',
 		),
+
 		'Sunday'	=> 'неділя',
 		'Monday'	=> 'понеділок',
 		'Tuesday'	=> 'вівторок',
@@ -886,6 +898,7 @@ $lang = array_merge($lang, array(
 		'Thursday'	=> 'четвер',
 		'Friday'	=> 'п\'ятниця',
 		'Saturday'	=> 'субота',
+
 		'Sun'	=> 'Нед',
 		'Mon'	=> 'Пон',
 		'Tue'	=> 'Вів',
@@ -893,6 +906,7 @@ $lang = array_merge($lang, array(
 		'Thu'	=> 'Чет',
 		'Fri'	=> 'П\'ят',
 		'Sat'	=> 'Суб',
+
 		'January'	=> 'Січня',
 		'February'	=> 'Лютого',
 		'March'	=> 'Березня',
@@ -905,6 +919,7 @@ $lang = array_merge($lang, array(
 		'October'	=> 'Жовтня',
 		'November'	=> 'Листопада',
 		'December'	=> 'Грудня',
+
 		'Jan'	=> 'січня',
 		'Feb'	=> 'лютого',
 		'Mar'	=> 'березня',
@@ -923,6 +938,9 @@ $lang = array_merge($lang, array(
 	// because they are named invers to their offset.
 	'timezones'		=> array(
 		'UTC'      				=> 'UTC',
+		'UTC_OFFSET'			=> 'UTC%1$s',
+		'UTC_OFFSET_CURRENT'	=> 'UTC%1$s - %2$s',
+
 		'Etc/GMT-12'	=> 'UTC+12',
 		'Etc/GMT-11'	=> 'UTC+11',
 		'Etc/GMT-10'	=> 'UTC+10',
@@ -947,6 +965,7 @@ $lang = array_merge($lang, array(
 		'Etc/GMT+10'	=> 'UTC-10',
 		'Etc/GMT+11'	=> 'UTC-11',
 		'Etc/GMT+12'	=> 'UTC-12',
+
 		'Africa/Abidjan'	=> 'Африка/Абіджан',
 		'Africa/Accra'		=> 'Африка/Аккра',
 		'Africa/Addis_Ababa'	=> 'Африка/Фддіс-Абеба',
@@ -999,11 +1018,13 @@ $lang = array_merge($lang, array(
 		'Africa/Tripoli'	=> 'Африка/Тріполі',
 		'Africa/Tunis'		=> 'Африка/Туніс',
 		'Africa/Windhoek'	=> 'Африка/Віндхук',
+
 		'America/Adak'		=> 'Америка/Адак',
 		'America/Anchorage'	=> 'Америка/Анкорідж',
 		'America/Anguilla'	=> 'Америка/Ангілія',
 		'America/Antigua'	=> 'Америка/Антігуа',
 		'America/Araguaina'	=> 'Америка/Арагуаїна',
+
 		'America/Argentina/Buenos_Aires'	=> 'Америка/Аргентина/Буенос-Айрес',
 		'America/Argentina/Catamarca'	=> 'Америка/Аргентина/Катамарка',
 		'America/Argentina/Cordoba'		=> 'Америка/Аргентина/Кордова',
@@ -1016,6 +1037,7 @@ $lang = array_merge($lang, array(
 		'America/Argentina/San_Luis'	=> 'Америка/Аргентина/Сан-Луїс',
 		'America/Argentina/Tucuman'		=> 'Америка/Аргентина/Тукуман',
 		'America/Argentina/Ushuaia'		=> 'Америка/Аргентина/Ушуая',
+
 		'America/Aruba'			=> 'Америка/Аруба',
 		'America/Asuncion'		=> 'Америка/Асунсйон',
 		'America/Atikokan'		=> 'Америка/Атікокан',
@@ -1147,6 +1169,7 @@ $lang = array_merge($lang, array(
 		'America/Winnipeg'		=> 'Америка/Вінніпег',
 		'America/Yakutat'		=> 'America/Якутат',
 		'America/Yellowknife'	=> 'America/Йеллоунайф',
+
 		'Antarctica/Casey'		=> 'Антарктида/Кейсі',
 		'Antarctica/Davis'		=> 'Антарктида/Девіс',
 		'Antarctica/DumontDUrville'	=> 'Антарктида/Дюмон Д\'юрвіль',
@@ -1158,7 +1181,9 @@ $lang = array_merge($lang, array(
 		'Antarctica/South_Pole'	=> 'Антарктида/Gівденний полюс',
 		'Antarctica/Syowa'		=> 'Антарктида/Сева',
 		'Antarctica/Vostok'		=> 'Антарктида/Схід',
+
 		'Arctic/Longyearbyen'	=> 'Арктика/Лонгйір',
+
 		'Asia/Aden'			=> 'Asia/Аден',
 		'Asia/Almaty'		=> 'Азія/Алмати',
 		'Asia/Amman'		=> 'Азія/Амман',
@@ -1238,6 +1263,7 @@ $lang = array_merge($lang, array(
 		'Asia/Yakutsk'		=> 'Азія/Якутськ',
 		'Asia/Yekaterinburg'	=> 'Азія/Єкатеринбург',
 		'Asia/Yerevan'		=> 'Азія/Єреван',
+
 		'Atlantic/Azores'		=> 'Атлантика/Азорські острови',
 		'Atlantic/Bermuda'		=> 'Атлантика/Бермудські острови',
 		'Atlantic/Canary'		=> 'Атлантика/Канарейка',
@@ -1248,6 +1274,7 @@ $lang = array_merge($lang, array(
 		'Atlantic/South_Georgia'	=> 'Атлантика/Південна Георгія',
 		'Atlantic/St_Helena'	=> 'Атлантика/острів Святої Єлени',
 		'Atlantic/Stanley'		=> 'Атлантика/Стенлі',
+
 		'Australia/Adelaide'	=> 'Австралія/Аделаїда',
 		'Australia/Brisbane'	=> 'Австралія/Брісбен',
 		'Australia/Broken_Hill'	=> 'Австралія/Брокен Хілл',
@@ -1260,6 +1287,7 @@ $lang = array_merge($lang, array(
 		'Australia/Melbourne'	=> 'Австралія/Мельбурн',
 		'Australia/Perth'		=> 'Австралія/Перт',
 		'Australia/Sydney'		=> 'Австралія/Сідней',
+
 		'Europe/Amsterdam'	=> 'Європа/Амстердам',
 		'Europe/Andorra'	=> 'Європа/Андорра',
 		'Europe/Athens'		=> 'Європа/Афіни',
@@ -1316,6 +1344,7 @@ $lang = array_merge($lang, array(
 		'Europe/Zagreb'		=> 'Європа/Загреб',
 		'Europe/Zaporozhye'	=> 'Європа/Запоріжжя',
 		'Europe/Zurich'		=> 'Європа/Цюріх',
+
 		'Indian/Antananarivo'	=> 'Індія/Антананаріву',
 		'Indian/Chagos'		=> 'Індія/Чагос',
 		'Indian/Christmas'	=> 'Індія/Крістмас',
@@ -1327,6 +1356,7 @@ $lang = array_merge($lang, array(
 		'Indian/Mauritius'	=> 'Індія/Маврикій',
 		'Indian/Mayotte'	=> 'Індія/Майотта',
 		'Indian/Reunion'	=> 'Індія/Реюньон',
+
 		'Pacific/Apia'		=> 'Тихий океан/Апіа',
 		'Pacific/Auckland'	=> 'Тихий океан/Окленд',
 		'Pacific/Chatham'	=> 'Тихий океан/Чатем',
