@@ -430,7 +430,7 @@ $lang = array_merge($lang, array(
 	'NOT_AUTHORISED'	=> 'Ви не маєте доступу в цю частину форуму.',
 	'NOT_WATCHING_FORUM'	=> 'Ви більше не слідкуєте за повідомленнями в цьому форумі.',
 	'NOT_WATCHING_TOPIC'	=> 'Ви більше не слідкуєте за цією темою.',
-	'NOTIFICATIONS'				=> 'Notifications',
+	'NOTIFICATIONS'				=> 'Сповіщення',
  	// This applies for NOTIFICATION_BOOKMARK and NOTIFICATION_POST.
  	// %1$s will return a list of users that's concatenated using "," and "and" - see STRING_LIST
  	// Once the user count reaches 5 users or more, the list is trimmed using NOTIFICATION_X_OTHERS
