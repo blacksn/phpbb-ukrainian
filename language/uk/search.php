@@ -10,7 +10,6 @@
 * the docs/CREDITS.txt file.
 *
 */
-*/
 
 /**
 * DO NOT CHANGE
