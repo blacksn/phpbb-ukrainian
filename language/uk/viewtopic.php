@@ -107,6 +107,7 @@ $lang = array_merge($lang, array(
 
 	'SUBMIT_VOTE'			=> 'Проголосувати',
 
+	'TOPIC_TOOLS'			=> 'Керування темою',
 	'TOTAL_VOTES'			=> 'Всього голосів',
 
 	'UNLOCK_TOPIC'			=> 'Відкрити тему',
@@ -122,7 +123,6 @@ $lang = array_merge($lang, array(
 	),
 
 	'VIEW_UNREAD_POST'		=> 'Перейти до першого непрочитаного повідомлення',
-	'VISIT_WEBSITE'			=> 'WWW',
 	'VOTE_SUBMITTED'		=> 'Ваш голос враховано.',
 	'VOTE_CONVERTED' => 'Зміна голосу не підтримується для конвертованих опитувань.',
 ));

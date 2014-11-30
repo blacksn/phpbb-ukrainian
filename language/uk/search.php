@@ -79,10 +79,11 @@ $lang = array_merge($lang, array(
 	'RESULT_DAYS'			=> 'Шукати повідомлення за останні',
 	'RESULT_SORT'			=> 'Сортувати результати за',
 	'RETURN_FIRST'			=> 'Відображати перші',
-	'RETURN_TO_SEARCH_ADV'	=> 'Повернутись до розширеного пошуку',
+	'GO_TO_SEARCH_ADV'	=> 'Розширений пошук',
 
 	'SEARCHED_FOR'				=> 'Пошуковий запит',
 	'SEARCHED_TOPIC'			=> 'Пошук в темі',
+	'SEARCHED_QUERY'			=> 'Пошуковий запит',
 	'SEARCH_ALL_TERMS'			=> 'Шукати усі слова / Шукати використовуючи мову запитів',
 	'SEARCH_ANY_TERMS'			=> 'Шукати будь-яке слово',
 	'SEARCH_AUTHOR'				=> 'Шукати за автором',
