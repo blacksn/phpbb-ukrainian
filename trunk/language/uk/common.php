@@ -411,7 +411,7 @@ $lang = array_merge($lang, array(
 	'MODERATORS'	=> 'Модератори',
 	'MODULE_NOT_ACCESS'		=> 'Модуль недоступний',
 	'MODULE_NOT_FIND'		=> 'Не знайдено модуль %s',
-	'MODULE_FILE_RIGHT_CLASS'	=> 'Файл модуля %s не містить необхідного класу [%s]',
+	'MODULE_FILE_INCORRECT_CLASS'	=> 'Файл модуля %s не містить коректного класу [%s]',
 	'MONTH'	=> 'Місяць',
 	'MOVE'	=> 'Перемістити',
 
@@ -597,7 +597,7 @@ $lang = array_merge($lang, array(
 	'PRIVATE_MESSAGING'	=> 'Приватні повідомлення',
 	'PROFILE'	=> 'Панель керування',
 
-	'QUICK_LINKS'			=> 'Посилання',
+	'QUICK_LINKS'			=> 'Швидкий доступ',
  
 	'RANK'						=> 'Звання',
 	'READING_FORUM'	=> 'Переглядає повідомлення в %s',
