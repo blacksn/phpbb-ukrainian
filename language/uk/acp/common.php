@@ -303,6 +303,7 @@ $lang = array_merge($lang, array(
 	'ADMIN_LOG_INDEX_EXPLAIN'	=> 'Ця сторінка надає вам можливість перегляду останніх п\'яти дій, виконаних адміністраторами. Усі логи можна переглянути з відповідного пункту меню або перейшовши за посиланням, вказаним нижче.',
 	'AVATAR_DIR_SIZE'	=> 'Розмір директорії аватарів',
 	'BOARD_STARTED'	=> 'Форум запрацював',
+	'BOARD_VERSION'		=> 'Версія форуму',
 	'DATABASE_SERVER_INFO'	=> 'Сервер баз даних',
 	'DATABASE_SIZE'	=> 'Розмір бази даних',
    // Enviroment configuration checks, mbstring related

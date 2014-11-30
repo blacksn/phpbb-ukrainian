@@ -73,6 +73,7 @@ $lang = array_merge($lang, array(
 	'STYLE_INSTALLED_RETURN_INSTALLED_STYLES'	=> 'Повернутись до списку встановлених стилів.',
 	'STYLE_INSTALLED_RETURN_UNINSTALLED_STYLES'	=> 'Встановити інші стилі.',
 	'STYLE_NAME'				=> 'Назва стилю',
+	'STYLE_NAME_RESERVED'		=> 'Неможливо встановити стиль "%s", оскільки ця назва зарезервована.',
 	'STYLE_NOT_INSTALLED'		=> 'Не вдалося встановити стиль "%s".',
 	'STYLE_PATH'				=> 'Шлях до стилю',
 	'STYLE_UNINSTALL'			=> 'Видалити',
