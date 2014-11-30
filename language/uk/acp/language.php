@@ -61,8 +61,8 @@ $lang = array_merge($lang, array(
 	'LANG_ISO_CODE'						=> 'Код ISO',
 	'LANG_LOCAL_NAME'					=> 'Локальна назва',
 
+	'MISSING_LANG_FILES'		=> 'Відсутні файли мови',
 	'MISSING_LANG_VARIABLES'	=> 'Відсутні змінні мови',
-	'MODS_FILES'				=> 'Мовні файли MOD-ів',
 
 	'NO_FILE_SELECTED'				=> 'Ви не вказали файл мови.',
 	'NO_LANG_ID'					=> 'Ви не вказали мовний пакет.',
