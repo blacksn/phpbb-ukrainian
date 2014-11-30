@@ -688,7 +688,7 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_ADD'	=> '<strong>Додано цензор слів</strong><br />» %s',
 	'LOG_WORD_DELETE'	=> '<strong>Видалено цензор слів</strong><br />» %s',
 	'LOG_WORD_EDIT'	=> '<strong>Змінено цензор слів</strong><br />» %s',
-+ 	'LOG_EXT_ENABLE'	=> '<strong>Розширення увімкнено</strong><br />» %s',
-+ 	'LOG_EXT_DISABLE'	=> '<strong>Розширення вимкнено</strong><br />» %s',
-+ 	'LOG_EXT_PURGE'		=> '<strong>Дані розширення видалено</strong><br />» %s',
+ 	'LOG_EXT_ENABLE'	=> '<strong>Розширення увімкнено</strong><br />» %s',
+ 	'LOG_EXT_DISABLE'	=> '<strong>Розширення вимкнено</strong><br />» %s',
+ 	'LOG_EXT_PURGE'		=> '<strong>Дані розширення видалено</strong><br />» %s',
 ));
