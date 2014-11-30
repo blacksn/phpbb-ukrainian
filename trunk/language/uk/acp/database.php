@@ -1,12 +1,13 @@
 <?php
 /**
 *
-* acp_database [Ukrainian]
+* This file is part of the phpBB Forum Software package.
 *
-* @package language
-* @version $Id: database.php 9765 2009-07-17 10:11:10Z bantu $
-* @copyright (c) 2005 phpBB Group
-* @license http://opensource.org/licenses/gpl-license.php GNU Public License
+* @copyright (c) phpBB Limited <https://www.phpbb.com>
+* @license GNU General Public License, version 2 (GPL-2.0)
+*
+* For full copyright and license information, please see
+* the docs/CREDITS.txt file.
 *
 */
 
@@ -53,12 +54,12 @@ $lang = array_merge($lang, array(
 	'DESELECT_ALL'	=> 'Зняти відмітки',
 	'DOWNLOAD_BACKUP'	=> 'Завантажити резервну копію',
 	'FILE_TYPE'	=> 'Тип файлу',
-   'FILE_WRITE_FAIL' => 'Не вдалося зберегти файл у папку "store".',
+	'FILE_WRITE_FAIL' => 'Не вдалося зберегти файл у папку "store".',
 	'FULL_BACKUP'	=> 'Усе',
 	'RESTORE_OPTIONS'	=> 'Налаштування відновлення',
 	'RESTORE_SUCCESS'	=> 'База даних успішно відновлена з резервної копії.<br /><br />Ваш форум повернувся в стан, в якому він був на момент створення резервної копії.',
 	'RESTORE_SELECTED_BACKUP'	=> 'Ви впевнені, що хочете відновити базу даних з обраної резервної копії?',
-  'SELECT_ALL'	=> 'Обрати усі',
+	'SELECT_ALL'	=> 'Обрати усі',
 	'SELECT_FILE'	=> 'Оберіть файл',
 	'START_BACKUP'	=> 'Розпочати резервне копіювання',
 	'START_RESTORE'	=> 'Розпочати відновлення з резервної копії',
@@ -67,5 +68,3 @@ $lang = array_merge($lang, array(
 	'STRUCTURE_ONLY'	=> 'Лише структуру',
 	'TABLE_SELECT'	=> 'Вибір таблиць',
 ));
-
-?>

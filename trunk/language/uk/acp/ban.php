@@ -1,12 +1,13 @@
 <?php
 /**
 *
-* acp_ban [Ukrainian]
+* This file is part of the phpBB Forum Software package.
 *
-* @package language
-* @version $Id: ban.php 9727 2009-07-07 13:33:53Z nickvergessen $
-* @copyright (c) 2005 phpBB Group
-* @license http://opensource.org/licenses/gpl-license.php GNU Public License
+* @copyright (c) phpBB Limited <https://www.phpbb.com>
+* @license GNU General Public License, version 2 (GPL-2.0)
+*
+* For full copyright and license information, please see
+* the docs/CREDITS.txt file.
 *
 */
 
@@ -62,17 +63,15 @@ $lang = array_merge($lang, array(
 	'IP_NO_BANNED'	=> 'Немає заборонених IP-адрес',
 	'IP_UNBAN'	=> 'Зняти заборону на доступ з IP-адрес',
 	'IP_UNBAN_EXPLAIN'	=> 'Ви можете розблокувати (виключити) декілька IP-адрес, обравши їх за допомогою відповідної комбінації миші та клавіатури вашого комп\'ютера та браузера. Виключені IP-адреси виділяються іншим кольором фону.',
-  'LENGTH_BAN_INVALID'	=> 'Формат дати <kbd>РРРР-ММ-ДД</kbd>.',
-  'OPTIONS_BANNED'			=> 'Заборонені',
+	'LENGTH_BAN_INVALID'	=> 'Формат дати <kbd>РРРР-ММ-ДД</kbd>.',
+	'OPTIONS_BANNED'			=> 'Заборонені',
 	'OPTIONS_EXCLUDED'			=> 'Розблоковані',
 	'PERMANENT'	=> 'Постійна',
 	'UNTIL'	=> 'До',
-	'USER_BAN'	=> 'Заблокувати доступ одному або декільком користувачам',
+	'USER_BAN'	=> 'Заблокувати доступ одному або декільком користувачам за іменем',
 	'USER_BAN_EXCLUDE_EXPLAIN'	=> 'Виключити введених користувачів з чорного списку.',
 	'USER_BAN_EXPLAIN'	=> 'Ви можете заблокувати відразу декількох користувачів, ввівши кожне ім\'я з нової стрічки. Використовуйте можливість <u>Знайти учасника</u> для пошуку і автоматичного додавання одного або декількох клористувачів.',
 	'USER_NO_BANNED'	=> 'Немає заблокованих користувачів',
-	'USER_UNBAN'	=> 'Відновити доступ користувачам',
+	'USER_UNBAN'	=> 'Відновити доступ користувачам за іменем',
 	'USER_UNBAN_EXPLAIN'	=> 'Ви можете розблокувати відразу декількох користувачів,  обравши їх за допомогою відповідної комбінації миші та клавіатури вашого комп\'ютера та браузера. Виключені користувачі виділяються іншим кольором фону.',
 ));
-
-?>

@@ -1,12 +1,13 @@
 <?php
 /**
 *
-* acp_forums [Ukrainian]
+* This file is part of the phpBB Forum Software package.
 *
-* @package language
-* @version $Id: forums.php 9896 2009-07-31 12:46:15Z Kellanved $
-* @copyright (c) 2005 phpBB Group
-* @license http://opensource.org/licenses/gpl-license.php GNU Public License
+* @copyright (c) phpBB Limited <https://www.phpbb.com>
+* @license GNU General Public License, version 2 (GPL-2.0)
+*
+* For full copyright and license information, please see
+* the docs/CREDITS.txt file.
 *
 */
 
@@ -43,6 +44,10 @@ $lang = array_merge($lang, array(
 	'AUTO_PRUNE_FREQ_EXPLAIN'	=> 'Період часу в днях між очищеннями.',
 	'AUTO_PRUNE_VIEWED'			=> 'Автоочищення за часом останнього перегляду',
 	'AUTO_PRUNE_VIEWED_EXPLAIN'	=> 'Кількість днів з моменту останнього перегляду, по проходженню яких тему буде видалено.',
+	'AUTO_PRUNE_SHADOW_FREQ'	=> 'Частота автоочистки посилань на перенесені теми',
+	'AUTO_PRUNE_SHADOW_DAYS'	=> 'Вік посилань на перенесені теми для автоочистки',
+	'AUTO_PRUNE_SHADOW_DAYS_EXPLAIN'	=> 'Кількість днів, по закінченні яких посилання на перенесену теми буде видалена.',
+	'AUTO_PRUNE_SHADOW_FREQ_EXPLAIN'	=> 'Час в днях між виконанням автоочистки.',
 
  	'CONTINUE' => 'Продовжити',
 	'COPY_PERMISSIONS'				=> 'Скопіювати права доступу з',
@@ -96,14 +101,16 @@ $lang = array_merge($lang, array(
 	'FORUM_NAME_EMPTY'					=> 'Ви повинні ввести назву для цього форуму.',
 	'FORUM_PARENT'						=> 'Батьківський форум',
 	'FORUM_PASSWORD'					=> 'Пароль форуму',
-	'FORUM_PASSWORD_UNSET'				=> 'Видалити пароль на форум',
-	'FORUM_PASSWORD_UNSET_EXPLAIN'		=> 'Встановіть тут галочку, якщо ви хочете видалити пароль на форум.',
-	'FORUM_PASSWORD_OLD'				=> 'Пароль форуму використовує застарілий метод шифрування і його потрібно змінити.',
 	'FORUM_PASSWORD_CONFIRM'			=> 'Підтвердження паролю форуму',
 	'FORUM_PASSWORD_CONFIRM_EXPLAIN'	=> 'Вводьте лише, якщо встановлюєте пароль на форум.',
 	'FORUM_PASSWORD_EXPLAIN'			=> 'Встановлює пароль для цього форуму. Рекомендується використання системи встановлення прав доступу.',
 	'FORUM_PASSWORD_MISMATCH'			=> 'Введені вами паролі не співпадають.',
+	'FORUM_PASSWORD_UNSET'				=> 'Видалити пароль на форум',
+	'FORUM_PASSWORD_UNSET_EXPLAIN'		=> 'Встановіть тут галочку, якщо ви хочете видалити пароль на форум.',
+	'FORUM_PASSWORD_OLD'				=> 'Пароль форуму використовує застарілий метод шифрування і його потрібно змінити.',
 	'FORUM_PRUNE_SETTINGS'				=> 'Налаштування очищення форуму',
+	'FORUM_PRUNE_SHADOW'				=> 'Включити автоочищення посилань на перенесені теми',
+	'FORUM_PRUNE_SHADOW_EXPLAIN'		=> 'Автоматичне очищення форумів від посилань на теми, перенесені в інші форуми. Задайте частоту автоочистки і вік перенесених тем нижче.',
 	'FORUM_RESYNCED'					=> 'Форум "%s" успішно синхронізовано',
 	'FORUM_RULES_EXPLAIN'				=> 'Правила форуму відображаються на кожній сторінці даного форуму.',
 	'FORUM_RULES_LINK'					=> 'Посилання на правила форуму',
@@ -158,5 +165,3 @@ $lang = array_merge($lang, array(
 
 	'UNLOCKED'			=> 'Відкрито',
 ));
-
-?>

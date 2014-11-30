@@ -1,12 +1,13 @@
 <?php
-/** 
+/**
 *
-* acp_attachments [Ukrainian]
+* This file is part of the phpBB Forum Software package.
 *
-* @package language
-* @version $Id: attachments.php 8946 2008-09-26 18:32:05Z toonarmy $
-* @copyright (c) 2005 phpBB Group
-* @license http://opensource.org/licenses/gpl-license.php GNU Public License
+* @copyright (c) phpBB Limited <https://www.phpbb.com>
+* @license GNU General Public License, version 2 (GPL-2.0)
+*
+* For full copyright and license information, please see
+* the docs/CREDITS.txt file.
 *
 */
 
@@ -62,6 +63,7 @@ $lang = array_merge($lang, array(
 	'ATTACH_MAX_PM_FILESIZE_EXPLAIN'	=> 'Максимальний розмір кожного файлу, приєднаного до приватного повідомлення. Для необмеженого встановіть значення 0.',
 	'ATTACH_ORPHAN_URL'					=> 'Загублені файли',
 	'ATTACH_POST_ID'					=> 'ID повідомлення',
+	'ATTACH_POST_TYPE'					=> 'Тип повідомлення',
 	'ATTACH_QUOTA'						=> 'Загальна квота приєднань',
 	'ATTACH_QUOTA_EXPLAIN'				=> 'Максимальний дисковий простір, доступний для усіх приєднань на форумі. Для необмеженого встановіть значення 0.',
 	'ATTACH_TO_POST'					=> 'Приєднати файл до повідомлення',
@@ -103,8 +105,10 @@ $lang = array_merge($lang, array(
    	'EXT_GROUP_IMAGES'            => 'Зображення',
    	'EXT_GROUP_PLAIN_TEXT'         => 'Текстові файли',
    	'EXT_GROUP_QUICKTIME_MEDIA'      => 'Файли Quicktime',
-   	'EXT_GROUP_REAL_MEDIA'         => 'Фйали Real Media',
+   	'EXT_GROUP_REAL_MEDIA'         => 'Файли Real Media',
    	'EXT_GROUP_WINDOWS_MEDIA'      => 'Файли Windows Media',
+	'FILES_GONE'			=> 'Деякі з обраних для видалення приєднаних файлів не існують. Можливо вони вже видалені. Існуючі приєднані файли видалено.',
+	'FILES_STATS_WRONG'		=> 'Схоже, що статистика приєднаних файлів недостовірна і потребує синхронізації. Актуальні дані: кількість приєднаних файлів = %1$d, загальний розмір приєднаних файлів = %2$s.<br />Натисність %3$sтут%4$s, що синхронізувати їх.',
 
 
 	'GO_TO_EXTENSIONS'		=> 'Перейти на сторінку керування розширеннями',
@@ -130,6 +134,7 @@ $lang = array_merge($lang, array(
 	'NOT_ALLOWED_IN_PM'			=> 'Дозволено лише в повідомленнях',
 	'NOT_ALLOWED_IN_PM_POST'	=> 'Не дозволено',
 	'NOT_ASSIGNED'				=> 'Не призначено',
+ 	'NO_ATTACHMENTS'			=> 'Не знайдено приєднаних файлів за цей період.',
 	'NO_EXT_GROUP'				=> 'Немає',
 	'NO_EXT_GROUP_NAME'			=> 'Не введене ім\'я групи',
 	'NO_EXT_GROUP_SPECIFIED'	=> 'Не задано групу розширень.',
@@ -143,8 +148,9 @@ $lang = array_merge($lang, array(
 	'ORDER_ALLOW_DENY'		=> 'Дозволити',
 	'ORDER_DENY_ALLOW'		=> 'Заборонити',
 
-	'REMOVE_ALLOWED_IPS'		=> 'Видалення <em>дозволених</em> IP/хостів',
-	'REMOVE_DISALLOWED_IPS'		=> 'Видалення <em>заборонених</em> IPs/хостів',
+	'REMOVE_ALLOWED_IPS'		=> 'Вилучення з виключених або видалення <em>дозволених</em> IP/хостів',
+	'REMOVE_DISALLOWED_IPS'		=> 'Вилучення з виключених або видалення <em>заборонених</em> IPs/хостів',
+	'RESYNC_FILES_STATS_CONFIRM'	=> 'Ви дійсно хочете синхронізувати статистику приєднаних файлів?',
 
 	'SEARCH_IMAGICK'				=> 'Знайти Imagemagick',
 	'SECURE_ALLOW_DENY'				=> 'Список Дозволених/Заборонених ',
@@ -170,5 +176,3 @@ $lang = array_merge($lang, array(
 	'UPLOAD_ICON'					=> 'Значок завантаження',
 	'UPLOAD_NOT_DIR'				=> 'Вказаний шлях для завантаження файлів не є диреторією.',
 ));
-
-?>
