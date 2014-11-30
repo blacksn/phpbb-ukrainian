@@ -173,7 +173,7 @@ $lang = array_merge($lang, array(
 	'CONNECTION_SUCCESS'	=> 'З\'єднання успішне!',
 	'CONTACT'				=> 'Контактна інформація',
 	'CONTACT_USER'			=> 'Контактна інформація користувача %s',
-	'CONTACT_US'			=> 'Зв\'язатися з адміністрацією',
+	'CONTACT_US'			=> 'Зв\'язок з адміністрацією',
 	'COOKIES_DELETED'	=> 'Усі файли cookies, встановлені форумом, успішно видалено.',
 	'CURRENT_TIME'	=> 'Сьогодні: %s',
 
