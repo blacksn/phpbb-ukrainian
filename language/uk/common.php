@@ -518,7 +518,7 @@ $lang = array_merge($lang, array(
 	'NO_USER_SPECIFIED'	=> 'Не задане ім\'я користувача.',
 
   	// Nullar/Singular/Plural language entry. The key numbers define the number range in which a certain grammatical expression is valid.
-   'NUM_ATTACHMENTS'		=> array(
+	'NUM_ATTACHMENTS'		=> array(
  		1	=> '%d приєднаний файл',
  		2	=> '%d приєднаних файлів',
  	),   	
@@ -746,7 +746,7 @@ $lang = array_merge($lang, array(
 	'TOO_SHORT_USER_PASSWORD'	=> 'Введений вами пароль надто короткий.',
 	'TOO_SHORT_USERNAME'	=> 'Введене вами ім\'я користувача надто коротке.',
 	'TOO_SHORT_EMAIL'	=> 'Введена вами адреса e-mail надто коротка.',
-  'TOO_SHORT_EMAIL_CONFIRM'		=> 'Введена вами адреса e-mail для підтвердження надто коротка.',
+	'TOO_SHORT_EMAIL_CONFIRM'		=> 'Введена вами адреса e-mail для підтвердження надто коротка.',
 	'TOO_SMALL'                  => 'Значення, яке ви ввели є занадто малим.',
 	'TOO_SMALL_MAX_RECIPIENTS'      => 'Введене вами значення налаштування <strong>Максимально дозволена кількість одержувачів приватного повідомлення</strong> є занадто малим.',
 
@@ -871,7 +871,7 @@ $lang = array_merge($lang, array(
 	'WRONG_DATA_POST_SD'		=> 'Обрано невірний метод сортування повідомлень.',
 	'WRONG_DATA_POST_SK'		=> 'Обрано невірне поле сортування повідомлень.',
 	'WRONG_DATA_TOPIC_SD'		=> 'Обрано невірний метод сортування тем.',
-	'WRONG_DATA_TOPIC_SK'		=> 'Обрано невірне поле сортування тем.',,	
+	'WRONG_DATA_TOPIC_SK'		=> 'Обрано невірне поле сортування тем.',	
 	'WROTE'	=> 'писав',
 
 	'YAHOO'				=> 'Yahoo Messenger',
