@@ -87,7 +87,7 @@ $lang = array_merge($lang, array(
 	'ARE_WATCHING_FORUM'	=> 'Ви підписались отримувати інформацію про надходження нових повідомлень в цей форум.',
 	'ARE_WATCHING_TOPIC'	=> 'Ви підписались отримувати інформацію про надходження нових повідомлень в цю тему.',
 	'ASCENDING'	=> 'за зростанням',
-	'ATTACHMENTS'	=> 'Приєднані файли',
+	'ATTACHMENTS'	=> 'Вкладення',
 	'ATTACHED_IMAGE_NOT_IMAGE'	=> 'Файл зображень, який ви намагались приєднати невірний.',
 	'AUTHOR'	=> 'Автор',
 	'AUTH_NO_PROFILE_CREATED'	=> 'Не вдалось створити профіль користувача',
@@ -181,7 +181,7 @@ $lang = array_merge($lang, array(
 	'DAYS'	=> 'Дні',
 	'DELETE'	=> 'Видалити',
 	'DELETE_ALL'	=> 'Видалити всі',
-	'DELETE_COOKIES'	=> 'Видалити встановлені форумом файли cookie',
+	'DELETE_COOKIES'	=> 'Видалити cookies форуму',
 	'DELETE_MARKED'	=> 'Видалити позначені',
 	'DELETE_POST'	=> 'Видалити повідомлення',
 	'DELIMITER'	=> 'Розділювач',
@@ -223,7 +223,7 @@ $lang = array_merge($lang, array(
 	'EXPAND_VIEW'	=> 'Розгорнутий вигляд',
 	'EXTENSION'	=> 'Розширення',
 	'EXTENSION_DISABLED'				=> 'Розширення <strong>%s</strong> не увімкнено.',
-	'EXTENSION_DISABLED_AFTER_POSTING'	=> 'Розширення <strong>%s</strong> було заборонено, приєднаний файл більше недоступний',
+	'EXTENSION_DISABLED_AFTER_POSTING'	=> 'Розширення <strong>%s</strong> було заборонено, вкладення більше недоступне',
 	'EXTENSION_DOES_NOT_EXIST'			=> 'Розширення <strong>%s</strong> не існує.',
 
 	'FACEBOOK'	=> 'Facebook',
@@ -519,8 +519,8 @@ $lang = array_merge($lang, array(
 
   	// Nullar/Singular/Plural language entry. The key numbers define the number range in which a certain grammatical expression is valid.
 	'NUM_ATTACHMENTS'		=> array(
- 		1	=> '%d приєднаний файл',
- 		2	=> '%d приєднаних файлів',
+ 		1	=> '%d вкладення',
+ 		2	=> '%d вкладень',
  	),   	
 	'NUM_POSTS_IN_QUEUE'      => array(
      	 	0         => 'Немає повідомлень у черзі',      // 0
@@ -761,7 +761,7 @@ $lang = array_merge($lang, array(
 	'TOPIC_TITLE'	=> 'Назва теми',
 	'TOPIC_UNAPPROVED'	=> 'Дану тему не було схвалено',
 	'TOPIC_DELETED'		=> 'Дану тему було видалено.',
-	'TOTAL_ATTACHMENTS'	=> 'Приєднаний(і) файл(и)',
+	'TOTAL_ATTACHMENTS'	=> 'Вкладення',
 	'TOTAL_LOGS'		=> array(
 		1	=> '%d лог',
 		2	=> '%d логів',

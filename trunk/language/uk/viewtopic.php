@@ -38,8 +38,8 @@ if (empty($lang) || !is_array($lang))
 
 $lang = array_merge($lang, array(
 	'APPROVE'			=> 'Схвалити',
-	'ATTACHMENT'						=> 'Приєднання файлів',
-	'ATTACHMENT_FUNCTIONALITY_DISABLED'	=> 'Функція приєднання файлів вимкнена.',
+	'ATTACHMENT'						=> 'Вкладення',
+	'ATTACHMENT_FUNCTIONALITY_DISABLED'	=> 'Функцію вкладень вимкнено.',
 
 	'BOOKMARK_ADDED'		=> 'Тему успішно додано в закладки.',
 	'BOOKMARK_ERR'         => 'Не вдалось додати в закладки тему. Повторіть вашу спробу.',
@@ -80,7 +80,7 @@ $lang = array_merge($lang, array(
 		2	=> 'Ви можете обрати до <strong>%d</strong> варіантів відповіді',
 	),
 
-	'MISSING_INLINE_ATTACHMENT'	=> 'Приєднаний файл <strong>%s</strong> більше недоступний',
+	'MISSING_INLINE_ATTACHMENT'	=> 'Вкладення <strong>%s</strong> більше недоступне',
 	'MOVE_TOPIC'				=> 'Перенести тему',
 
 	'NO_ATTACHMENT_SELECTED'=> 'Ви не вибрали файл для перегляду чи завантаження з сервера.',
