@@ -69,8 +69,8 @@ $lang = array_merge($lang, array(
 	'NO_REMOVE_DEFAULT_LANG'		=> 'Ви не можете видалити мовний пакет за замовчуванням.<br />Якщо ви хочете видалити цей мовний пакет, спочатку змініть мову за замовчуванням.',
 	'NO_UNINSTALLED_LANGUAGE_PACKS'	=> 'Немає невстановлених мовних пакетів',
 
-	'THOSE_MISSING_LANG_FILES'			=> 'Наступні мовні змінні відсутні в %s папці мови',
-	'THOSE_MISSING_LANG_VARIABLES'		=> 'Наступні мовні змінні відсутні в <strong>%s</strong> мовному пакеті',
+	'THOSE_MISSING_LANG_FILES'			=> 'Наступні мовні файли відсутні у мовному пакеті "%s"',
+	'THOSE_MISSING_LANG_VARIABLES'		=> 'Наступні мовні змінні відсутні у мовному пакеті "%s"',
 
 	'UNINSTALLED_LANGUAGE_PACKS'	=> 'Невстановлені мовні пакети',
 ));
