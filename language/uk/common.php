@@ -342,7 +342,7 @@ $lang = array_merge($lang, array(
 	'JABBER'	=> 'Jabber',
 	'JOINED'	=> 'З нами з',
 	'JUMP_PAGE'	=> 'Введіть номер сторінки, на яку бажаєте перейти',
-	'JUMP_TO'	=> 'Вперед',
+	'JUMP_TO'	=> 'Перейти',
 	'JUMP_TO_PAGE'	=> 'Перейти на сторінку',
 	'JUMP_TO_PAGE_CLICK'	=> 'Натисніть для переходу на сторінку…',
 
