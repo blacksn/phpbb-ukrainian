@@ -546,7 +546,7 @@ $lang = array_merge($lang, array(
 	'LOG_USERS_APPROVED' => '<strong>Схвалено кандидатів в групу </strong>%1$s<br />» %2$s',
  	'LOG_USERS_PENDING' => '<strong>Користувачі відіслали запит про вступ до групи “%1$s” і чекають схвалення</strong><br />» %2$s',
  
- 	'LOG_IMAGE_GENERATION_ERROR' => '<strong>Помилка під час створення зображення</strong><br/ >» Помилка в %1$s у рядку %2$s: %3$s',
+ 	'LOG_IMAGE_GENERATION_ERROR' => '<strong>Помилка під час створення зображення</strong><br />» Помилка в %1$s у рядку %2$s: %3$s',
 
 	'LOG_INACTIVE_ACTIVATE'	=> '<strong>Активовано неактивних користувачів</strong><br />» %s',
 	'LOG_INACTIVE_DELETE'	=> '<strong>Видалено неактивних користувачів</strong><br />» %s',
