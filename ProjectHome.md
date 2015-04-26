@@ -1,0 +1,1 @@
+To allow community work on improving Ukrainian translation for phpBB 3.0.7 and above.
